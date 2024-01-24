@@ -1,0 +1,39 @@
+15:23:35 **** Incremental Build of configuration Debug for project Freertos_Inclinometer ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/sw/Nexysa7fpga/freertos10_xilinx_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'prvGyroDataTask':
+../src/main.c:189:49: warning: passing argument 3 of 'mpu6050_getData' makes pointer from integer without a cast [-Wint-conversion]
+  189 |                 mpu6050_getData(&i2c, &mpu6050, currAngle, axis);
+      |                                                 ^~~~~~~~~
+      |                                                 |
+      |                                                 int
+In file included from ../src/main.c:18:
+../src/MPU6050/mpu6050.h:50:56: note: expected 'int *' but argument is of type 'int'
+   50 | void mpu6050_getData(XIic* i2c, MPU6050* mpu6050, int *angle_actual, int axis);
+      |                                                   ~~~~~^~~~~~~~~~~~
+At top level:
+../src/main.c:53:21: warning: 'xUARTTask' defined but not used [-Wunused-variable]
+   53 | static TaskHandle_t xUARTTask;
+      |                     ^~~~~~~~~
+../src/main.c: In function 'prvGyroDataTask':
+../src/main.c:189:17: warning: 'currAngle' is used uninitialized [-Wuninitialized]
+  189 |                 mpu6050_getData(&i2c, &mpu6050, currAngle, axis);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Freertos_Inclinometer.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/sw/Nexysa7fpga/freertos10_xilinx_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Freertos_Inclinometer.elf"  ./src/MPU6050/mpu6050.o  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: Freertos_Inclinometer.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Freertos_Inclinometer.elf  |tee "Freertos_Inclinometer.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39280	    416	  69664	 109360	  1ab30	Freertos_Inclinometer.elf
+'Finished building: Freertos_Inclinometer.elf.size'
+' '
+
+15:23:38 Build Finished (took 2s.660ms)
+

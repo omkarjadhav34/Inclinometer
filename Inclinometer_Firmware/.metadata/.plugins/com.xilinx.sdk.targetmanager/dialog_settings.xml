@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="Freertos_Inclinometer_system-bitFile" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer\Inclinometer.runs\impl_1\inclinometer.bit"/>
+	<item key="Freertos_Inclinometer_system-bmmFile" value="${project_loc:Freertos_Inclinometer}/_ide/bitstream/inclinometer_rtos.mmi"/>
+	<item key="Freertos_Inclinometer_system-target" value="Local"/>
+	<item key="Freertos_Inclinometer_system-device" value="Auto Detect"/>
+	<item key="Freertos_Inclinometer_system-partial_bit" value="false"/>
+	<item key="Freertos_Inclinometer_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="Freertos_Inclinometer_system"/>
+	<item key="Freertos_Inclinometer_system-microblaze_0-initElf" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer\Debug\Freertos_Inclinometer.elf"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Nexys4DDR 210292743020A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Nexys4DDR-210292743020A-13631093-0&quot;}}]}"/>
+</section>

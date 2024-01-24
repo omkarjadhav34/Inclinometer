@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="scw_hwspec" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer"/>
+	<item key="fpga_elf_mem_selection" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer\Debug"/>
+	<item key="sdx_program_fpga_view_bit_bmm_browse_key" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer\Inclinometer.runs\impl_1"/>
+</section>

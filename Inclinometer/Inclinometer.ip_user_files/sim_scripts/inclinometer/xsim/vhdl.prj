@@ -1,0 +1,14 @@
+vhdl xil_defaultlib  \
+"../../../bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/sim/inclinometer_microblaze_0_axi_intc_1.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_mdm_1_1/sim/inclinometer_mdm_1_1.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/sim/inclinometer_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_axi_timer_0_1/sim/inclinometer_axi_timer_0_1.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/sim/inclinometer_axi_uartlite_0_0.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_axi_iic_0_1/sim/inclinometer_axi_iic_0_1.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_microblaze_0_3/sim/inclinometer_microblaze_0_3.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_dlmb_v10_3/sim/inclinometer_dlmb_v10_3.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_ilmb_v10_3/sim/inclinometer_ilmb_v10_3.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/sim/inclinometer_dlmb_bram_if_cntlr_3.vhd" \
+"../../../bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/sim/inclinometer_ilmb_bram_if_cntlr_3.vhd" \
+
+nosort

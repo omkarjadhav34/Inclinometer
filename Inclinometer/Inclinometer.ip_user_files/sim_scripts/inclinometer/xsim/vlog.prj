@@ -1,0 +1,19 @@
+verilog xil_defaultlib --include "../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/ec67/hdl" --include "../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/7698" --include "../../../../Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/drivers/nexys4io_v1_0/src" \
+"../../../bd/inclinometer/ip/inclinometer_xbar_2/sim/inclinometer_xbar_2.v" \
+"../../../bd/inclinometer/ip/inclinometer_microblaze_0_xlconcat_1/sim/inclinometer_microblaze_0_xlconcat_1.v" \
+"../../../bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_clk_wiz.v" \
+"../../../bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0.v" \
+"../../../bd/inclinometer/ipshared/f811/hdl/nexys4io_v3_0_S00_AXI.v" \
+"../../../bd/inclinometer/ipshared/f811/hdl/nexys4io_v3_0.v" \
+"../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/f811/src/rgbpwm.v" \
+"../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/f811/src/debounce.v" \
+"../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/f811/src/sevensegment.v" \
+"../../../bd/inclinometer/ip/inclinometer_nexys4io_0_2/sim/inclinometer_nexys4io_0_2.v" \
+"../../../bd/inclinometer/ip/inclinometer_bidirec_0_0/sim/inclinometer_bidirec_0_0.v" \
+"../../../bd/inclinometer/ip/inclinometer_bidirec_0_1/sim/inclinometer_bidirec_0_1.v" \
+"../../../bd/inclinometer/sim/inclinometer.v" \
+"../../../bd/inclinometer/ip/inclinometer_lmb_bram_3/sim/inclinometer_lmb_bram_3.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1705886606" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/inclinometer.dcp">
+  <File Type="PA-TCL" Name="inclinometer.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="inclinometer_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="inclinometer_reports.tcl"/>
+  <File Type="RDS-RDS" Name="inclinometer.vds"/>
+  <File Type="RDS-UTIL" Name="inclinometer_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="inclinometer_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="inclinometer.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="inclinometer_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="inclinometer_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/nexysa7fpga.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_gsproj_R1_0/hdl/nexysa7fpga.v"/>
+        <Attr Name="ImportTime" Val="1673648002"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/inclinometer/inclinometer.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="inclinometer"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/src/rvfpganexys.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../ECE540-Fall23/Project1/RVfpga_EL2/RVfpga_NexysA7-DDR/src/rvfpganexys.xdc"/>
+        <Attr Name="ImportTime" Val="1693582712"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/src/rvfpganexys.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/inclinometer.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_lmb_bram_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_xbar_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_dlmb_bram_if_cntlr_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_bidirec_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_bidirec_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_ilmb_bram_if_cntlr_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_microblaze_0_axi_intc_1"/>
+</GenRun>

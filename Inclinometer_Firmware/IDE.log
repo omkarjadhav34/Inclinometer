@@ -1,0 +1,755 @@
+16:47:16 DEBUG : Logs will be stored at 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/IDE.log'.
+16:47:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+16:47:20 INFO  : Registering command handlers for Vitis TCF services
+16:47:20 INFO  : Platform repository initialization has completed.
+16:47:24 INFO  : XSCT server has started successfully.
+16:47:24 INFO  : plnx-install-location is set to ''
+16:47:29 INFO  : Successfully done setting XSCT server connection channel  
+16:47:29 INFO  : Successfully done query RDI_DATADIR 
+16:47:29 INFO  : Successfully done setting workspace for the tool. 
+16:48:10 ERROR : (XSDB Server)ERROR: [Hsi 55-1545] Problem running tcl command ::sw_freertos10_xilinx_v1_12::FreeRTOS_drc : FreeRTOS for Microblaze requires interrupts enabled for a timer.
+    while executing
+"error "FreeRTOS for Microblaze requires interrupts enabled for a timer." "" "mdt_error""
+    (procedure "mb_drc_checks" line 88)
+    invoked from within
+"mb_drc_checks $sw_proc_handle $hw_proc_handle $os_handle"
+    (procedure "::sw_freertos10_xilinx_v1_12::FreeRTOS_drc" line 11)
+    invoked from within
+"::sw_freertos10_xilinx_v1_12::FreeRTOS_drc freertos10_xilinx"
+ERROR: [Hsi 55-1440] Error(s) while running DRCs.
+
+16:48:10 ERROR : (XSDB Server)UpdateStringProc should not be invoked for type regexp
+
+16:48:13 ERROR : Failed to create platform.
+16:48:24 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+16:48:26 INFO  : XSCT server has started successfully.
+16:48:26 WARN  : Failed to closehw "C:/Users/jadha/AppData/Local/Temp/hwspec_inclinometer3473725240637424304/inclinometer.xsa"
+Reason: Cannot close hw design 'C:/Users/jadha/AppData/Local/Temp/hwspec_inclinometer3473725240637424304/inclinometer.xsa'.
+Design is not opened in the current session.
+
+17:28:03 DEBUG : Logs will be stored at 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/IDE.log'.
+17:28:05 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+17:28:06 INFO  : Registering command handlers for Vitis TCF services
+17:28:06 INFO  : Platform repository initialization has completed.
+17:28:07 INFO  : XSCT server has started successfully.
+17:28:07 INFO  : plnx-install-location is set to ''
+17:28:07 INFO  : Successfully done setting XSCT server connection channel  
+17:28:08 INFO  : Successfully done setting workspace for the tool. 
+17:28:08 INFO  : Successfully done query RDI_DATADIR 
+17:28:53 INFO  : Result from executing command 'getProjects': Nexysa7fpga
+17:28:53 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:29:08 INFO  : Result from executing command 'getProjects': Nexysa7fpga
+17:29:08 INFO  : Result from executing command 'getPlatforms': Nexysa7fpga|C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/Nexysa7fpga.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:45:40 INFO  : Result from executing command 'getProjects': Nexysa7fpga
+17:45:40 INFO  : Result from executing command 'getPlatforms': Nexysa7fpga|C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/Nexysa7fpga.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:45:40 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+13:33:21 DEBUG : Logs will be stored at 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/IDE.log'.
+13:33:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+13:33:28 INFO  : Registering command handlers for Vitis TCF services
+13:33:28 INFO  : XSCT server has started successfully.
+13:33:28 INFO  : Platform repository initialization has completed.
+13:33:34 INFO  : plnx-install-location is set to ''
+13:33:34 INFO  : Successfully done setting XSCT server connection channel  
+13:33:34 INFO  : Successfully done query RDI_DATADIR 
+13:33:34 INFO  : Successfully done setting workspace for the tool. 
+17:55:51 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+17:56:19 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+17:59:25 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+18:04:37 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+18:07:31 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+18:08:06 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+18:28:50 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+18:29:14 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+18:32:01 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:08:06 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:10:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:10:51 INFO  : 'fpga -state' command is executed.
+20:10:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:10:51 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:10:51 INFO  : 'jtag frequency' command is executed.
+20:10:51 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:51 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:10:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:10:51 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:51 INFO  : System reset is completed.
+20:10:54 INFO  : 'after 3000' command is executed.
+20:10:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:55 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:10:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:10:55 INFO  : Context for processor 'microblaze_0' is selected.
+20:10:55 INFO  : 'con' command is executed.
+20:10:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:10:55 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:11:13 INFO  : Disconnected from the channel tcfchan#1.
+20:11:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:11:14 INFO  : 'fpga -state' command is executed.
+20:11:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:11:14 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:11:14 INFO  : 'jtag frequency' command is executed.
+20:11:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:11:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:11:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:14 INFO  : System reset is completed.
+20:11:17 INFO  : 'after 3000' command is executed.
+20:11:17 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:17 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:11:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:11:18 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:18 INFO  : 'con' command is executed.
+20:11:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:11:18 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:12:44 INFO  : Disconnected from the channel tcfchan#2.
+20:13:07 DEBUG : Logs will be stored at 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/IDE.log'.
+20:13:08 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+20:13:11 INFO  : XSCT server has started successfully.
+20:13:11 INFO  : plnx-install-location is set to ''
+20:13:11 INFO  : Successfully done setting XSCT server connection channel  
+20:13:11 INFO  : Successfully done setting workspace for the tool. 
+20:13:16 INFO  : Registering command handlers for Vitis TCF services
+20:13:16 INFO  : Successfully done query RDI_DATADIR 
+20:13:17 INFO  : Platform repository initialization has completed.
+20:13:42 DEBUG : Logs will be stored at 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/IDE.log'.
+20:13:42 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+20:13:45 INFO  : XSCT server has started successfully.
+20:13:45 INFO  : Successfully done setting XSCT server connection channel  
+20:13:45 INFO  : plnx-install-location is set to ''
+20:13:45 INFO  : Successfully done setting workspace for the tool. 
+20:13:47 INFO  : Registering command handlers for Vitis TCF services
+20:13:47 INFO  : Successfully done query RDI_DATADIR 
+20:13:47 INFO  : Platform repository initialization has completed.
+20:15:21 INFO  : Result from executing command 'getProjects': Nexysa7fpga
+20:15:21 INFO  : Result from executing command 'getPlatforms': Nexysa7fpga|C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/Nexysa7fpga.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:15:21 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:17:44 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+20:17:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:17:46 ERROR : couldn't open "C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit": no such file or directory
+20:19:03 INFO  : Hardware specification for platform project 'Nexysa7fpga' is updated.
+20:19:19 INFO  : Result from executing command 'getProjects': Nexysa7fpga
+20:19:19 INFO  : Result from executing command 'getPlatforms': Nexysa7fpga|C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/Nexysa7fpga.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:19:28 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:21:27 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+20:24:08 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:24:24 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+20:24:45 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+20:24:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:24:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:24:47 INFO  : Device configured successfully with "C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit"
+20:25:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:25:12 INFO  : 'fpga -state' command is executed.
+20:25:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:25:12 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:25:12 INFO  : 'jtag frequency' command is executed.
+20:25:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:13 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:25:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:25:13 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:13 INFO  : System reset is completed.
+20:25:16 INFO  : 'after 3000' command is executed.
+20:25:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:16 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:25:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:25:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:16 INFO  : 'con' command is executed.
+20:25:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:25:16 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:28:01 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:28:07 INFO  : Disconnected from the channel tcfchan#2.
+20:28:17 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:28:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:28:21 INFO  : 'fpga -state' command is executed.
+20:28:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:28:21 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:28:21 INFO  : 'jtag frequency' command is executed.
+20:28:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:22 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:28:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:28:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:22 INFO  : System reset is completed.
+20:28:25 INFO  : 'after 3000' command is executed.
+20:28:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:25 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:28:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:28:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:25 INFO  : 'con' command is executed.
+20:28:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:28:25 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:29:22 INFO  : Disconnected from the channel tcfchan#4.
+20:32:09 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:32:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:32:16 INFO  : 'fpga -state' command is executed.
+20:32:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:32:16 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:32:16 INFO  : 'jtag frequency' command is executed.
+20:32:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:32:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:32:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:32:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:32:16 INFO  : System reset is completed.
+20:32:19 INFO  : 'after 3000' command is executed.
+20:32:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:32:20 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:32:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:32:20 INFO  : Context for processor 'microblaze_0' is selected.
+20:32:20 INFO  : 'con' command is executed.
+20:32:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:32:20 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:34:11 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:34:16 INFO  : Disconnected from the channel tcfchan#5.
+20:34:26 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:34:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:34:30 INFO  : 'fpga -state' command is executed.
+20:34:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:34:30 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:34:30 INFO  : 'jtag frequency' command is executed.
+20:34:30 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:34:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:34:30 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:30 INFO  : System reset is completed.
+20:34:33 INFO  : 'after 3000' command is executed.
+20:34:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:33 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:34:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:34:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:34:34 INFO  : 'con' command is executed.
+20:34:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:34:34 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:36:52 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:36:58 INFO  : Disconnected from the channel tcfchan#6.
+20:37:08 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:37:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:37:11 INFO  : 'fpga -state' command is executed.
+20:37:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:37:11 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:37:11 INFO  : 'jtag frequency' command is executed.
+20:37:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:37:11 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:37:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:37:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:37:11 INFO  : System reset is completed.
+20:37:14 INFO  : 'after 3000' command is executed.
+20:37:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:37:14 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:37:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:37:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:37:14 INFO  : 'con' command is executed.
+20:37:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:37:14 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:37:43 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:38:12 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:38:17 INFO  : Disconnected from the channel tcfchan#7.
+20:38:27 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:38:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:38:40 INFO  : 'fpga -state' command is executed.
+20:38:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:38:40 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:38:40 INFO  : 'jtag frequency' command is executed.
+20:38:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:40 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:38:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:38:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:40 INFO  : System reset is completed.
+20:38:43 INFO  : 'after 3000' command is executed.
+20:38:43 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:43 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:38:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:38:43 INFO  : Context for processor 'microblaze_0' is selected.
+20:38:43 INFO  : 'con' command is executed.
+20:38:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:38:43 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:39:34 INFO  : Disconnected from the channel tcfchan#8.
+20:39:44 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:39:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:39:49 INFO  : 'fpga -state' command is executed.
+20:39:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:49 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:39:49 INFO  : 'jtag frequency' command is executed.
+20:39:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:39:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:39:49 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:49 INFO  : System reset is completed.
+20:39:52 INFO  : 'after 3000' command is executed.
+20:39:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:52 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:39:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:39:52 INFO  : Context for processor 'microblaze_0' is selected.
+20:39:52 INFO  : 'con' command is executed.
+20:39:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:39:52 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:42:33 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:42:37 INFO  : Disconnected from the channel tcfchan#9.
+20:42:47 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:42:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:42:50 INFO  : 'fpga -state' command is executed.
+20:42:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:42:50 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:42:50 INFO  : 'jtag frequency' command is executed.
+20:42:50 INFO  : Context for processor 'microblaze_0' is selected.
+20:42:50 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:42:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:42:50 INFO  : Context for processor 'microblaze_0' is selected.
+20:42:50 INFO  : System reset is completed.
+20:42:53 INFO  : 'after 3000' command is executed.
+20:42:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:42:53 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:42:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:42:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:42:54 INFO  : 'con' command is executed.
+20:42:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:42:54 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:46:09 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:46:14 INFO  : Disconnected from the channel tcfchan#10.
+20:46:24 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:46:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:46:34 INFO  : 'fpga -state' command is executed.
+20:46:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:46:34 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:46:34 INFO  : 'jtag frequency' command is executed.
+20:46:34 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:46:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:46:34 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:34 INFO  : System reset is completed.
+20:46:37 INFO  : 'after 3000' command is executed.
+20:46:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:38 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:46:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:46:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:46:38 INFO  : 'con' command is executed.
+20:46:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:46:38 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:49:24 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:49:28 INFO  : Disconnected from the channel tcfchan#11.
+20:49:38 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:49:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:49:42 INFO  : 'fpga -state' command is executed.
+20:49:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:49:42 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:49:42 INFO  : 'jtag frequency' command is executed.
+20:49:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:49:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:49:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:49:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:49:42 INFO  : System reset is completed.
+20:49:45 INFO  : 'after 3000' command is executed.
+20:49:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:49:46 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:49:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:49:46 INFO  : Context for processor 'microblaze_0' is selected.
+20:49:46 INFO  : 'con' command is executed.
+20:49:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:49:46 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:51:22 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:51:29 INFO  : Disconnected from the channel tcfchan#12.
+20:51:39 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:51:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:51:42 INFO  : 'fpga -state' command is executed.
+20:51:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:51:42 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:51:42 INFO  : 'jtag frequency' command is executed.
+20:51:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:51:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:51:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:51:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:51:42 INFO  : System reset is completed.
+20:51:45 INFO  : 'after 3000' command is executed.
+20:51:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:51:45 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:51:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:51:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:51:45 INFO  : 'con' command is executed.
+20:51:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:51:45 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+20:53:09 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+20:53:13 INFO  : Disconnected from the channel tcfchan#13.
+20:53:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+20:53:14 INFO  : 'fpga -state' command is executed.
+20:53:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:53:14 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+20:53:14 INFO  : 'jtag frequency' command is executed.
+20:53:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:53:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa'.
+20:53:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:53:14 INFO  : Context for processor 'microblaze_0' is selected.
+20:53:14 INFO  : System reset is completed.
+20:53:17 INFO  : 'after 3000' command is executed.
+20:53:17 INFO  : Context for processor 'microblaze_0' is selected.
+20:53:18 INFO  : The application 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf' is downloaded to processor 'microblaze_0'.
+20:53:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Nexysa7fpga/export/Nexysa7fpga/hw/inclinometer_rtos.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/Freertos_Inclinometer/Debug/Freertos_Inclinometer.elf
+----------------End of Script----------------
+
+20:53:18 INFO  : Context for processor 'microblaze_0' is selected.
+20:53:18 INFO  : 'con' command is executed.
+20:53:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:53:18 INFO  : Launch script is exported to file 'C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\Freertos_Inclinometer_system\_ide\scripts\debugger_freertos_inclinometer-default.tcl'
+21:03:17 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+21:03:23 INFO  : Disconnected from the channel tcfchan#14.
+21:03:33 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:36:01 DEBUG : Logs will be stored at 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer_Firmware/IDE.log'.
+13:36:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\Inclinometer_Firmware\temp_xsdb_launch_script.tcl
+13:36:05 INFO  : XSCT server has started successfully.
+13:36:05 INFO  : plnx-install-location is set to ''
+13:36:05 INFO  : Successfully done setting XSCT server connection channel  
+13:36:05 INFO  : Successfully done setting workspace for the tool. 
+13:36:09 INFO  : Registering command handlers for Vitis TCF services
+13:36:09 INFO  : Successfully done query RDI_DATADIR 
+13:36:09 INFO  : Platform repository initialization has completed.
+15:23:35 INFO  : Checking for BSP changes to sync application flags for project 'Freertos_Inclinometer'...
+15:25:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+15:25:25 INFO  : 'fpga -state' command is executed.
+15:25:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:25 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+15:25:25 INFO  : 'jtag frequency' command is executed.
+15:25:28 ERROR : no targets found with "name =~ "*microblaze*#0" && bscan=="USER2" ". available targets:
+  1* xc7a100t
+15:25:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+----------------End of Script----------------
+
+15:25:28 ERROR : no targets found with "name =~ "*microblaze*#0" && bscan=="USER2" ". available targets:
+  1* xc7a100t
+15:25:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292743020A" && level==0 && jtag_device_ctx=="jsn-Nexys4DDR-210292743020A-13631093-0"}' command is executed.
+15:25:56 INFO  : 'fpga -state' command is executed.
+15:25:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:56 INFO  : Jtag cable 'Digilent Nexys4DDR 210292743020A' is selected.
+15:25:56 INFO  : 'jtag frequency' command is executed.
+15:25:59 ERROR : no targets found with "name =~ "*microblaze*#0" && bscan=="USER2" ". available targets:
+  1* xc7a100t
+15:25:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+----------------End of Script----------------
+
+15:25:59 ERROR : no targets found with "name =~ "*microblaze*#0" && bscan=="USER2" ". available targets:
+  1* xc7a100t
+15:27:34 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:27:58 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:28:31 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+15:28:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:24 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+15:29:56 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+15:29:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:39 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:31:09 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:33:05 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:33:46 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+15:33:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:34:38 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+15:35:47 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+15:36:57 INFO  : Bit file 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/impl_1/download.bit' is generated.
+15:36:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:38:23 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
