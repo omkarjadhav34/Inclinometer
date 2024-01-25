@@ -34,7 +34,7 @@ void mpu6050_init(XIic* i2c, MPU6050* mpu6050)
 	//XIic_Send(i2c->BaseAddress, PWR_MGMT_1,(u8 *)&oBuf,1,XIIC_STOP);
 
 	xil_printf("MPU6050 Initialization: %s : SensordId: 0x%x\n\r",
-			((u8)iBuf > 0)? "Success" : "Fail", (u8)iBuf);
+			((u8)iBuf > 0) ? "Success" : "Fail", (u8)iBuf);
 }
 
 

@@ -51,3 +51,42 @@ timestamp=[2024-01-23 13:36:07], mode=WORKBENCH_START, duration=0:00:10.144, dur
 timestamp=[2024-01-23 13:36:08], mode=WORKBENCH_UI_INIT, duration=0:00:00.708, duration_ms=708, data={editors_count=9, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Freertos_Inclinometer,Freertos_Inclinometer_system,Nexysa7fpga,RemoteSystemsTempFiles}
 timestamp=[2024-01-23 13:36:09], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.580, duration_ms=580, data={}
 timestamp=[2024-01-23 15:23:38], mode=BUILD, duration=0:00:02.723, duration_ms=2723, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-23 17:27:27], mode=WORKBENCH_START, duration=0:00:08.631, duration_ms=8631, data={}
+timestamp=[2024-01-23 17:27:28], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.606, duration_ms=606, data={}
+timestamp=[2024-01-23 17:27:28], mode=WORKBENCH_UI_INIT, duration=0:00:01.339, duration_ms=1339, data={editors_count=12, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Freertos_Inclinometer,Freertos_Inclinometer_system,Nexysa7fpga,RemoteSystemsTempFiles}
+timestamp=[2024-01-23 17:28:28], mode=BUILD, duration=0:00:01.001, duration_ms=1001, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-23 17:28:50], mode=BUILD, duration=0:00:00.113, duration_ms=113, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-23 17:28:50], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=Freertos_Inclinometer_system, configuration=Debug, clean_build=false}
+timestamp=[2024-01-23 17:29:00], mode=BUILD, duration=0:00:00.164, duration_ms=164, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-23 17:29:11], mode=BUILD, duration=0:00:00.744, duration_ms=744, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 00:07:13], mode=WORKBENCH_START, duration=0:00:07.854, duration_ms=7854, data={}
+timestamp=[2024-01-24 00:07:14], mode=WORKBENCH_UI_INIT, duration=0:00:00.638, duration_ms=638, data={editors_count=12, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Freertos_Inclinometer,Freertos_Inclinometer_system,Nexysa7fpga,RemoteSystemsTempFiles}
+timestamp=[2024-01-24 00:07:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.760, duration_ms=760, data={}
+timestamp=[2024-01-24 13:50:39], mode=WORKBENCH_START, duration=0:00:11.828, duration_ms=11828, data={}
+timestamp=[2024-01-24 13:50:39], mode=WORKBENCH_UI_INIT, duration=0:00:00.821, duration_ms=821, data={editors_count=12, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Freertos_Inclinometer,Freertos_Inclinometer_system,Nexysa7fpga,RemoteSystemsTempFiles}
+timestamp=[2024-01-24 13:50:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.928, duration_ms=928, data={}
+timestamp=[2024-01-24 13:52:36], mode=PLATFORM_GENERATION, duration=0:00:07.511, duration_ms=7511, data={name=Nexysa7fpga}
+timestamp=[2024-01-24 13:52:38], mode=BUILD, duration=0:00:01.262, duration_ms=1262, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:06:31], mode=WORKBENCH_START, duration=0:00:08.334, duration_ms=8334, data={}
+timestamp=[2024-01-24 14:06:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.934, duration_ms=934, data={editors_count=12, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Freertos_Inclinometer,Freertos_Inclinometer_system,Nexysa7fpga,RemoteSystemsTempFiles}
+timestamp=[2024-01-24 14:06:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.811, duration_ms=811, data={}
+timestamp=[2024-01-24 14:06:58], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:10:36], mode=BUILD, duration=0:00:00.952, duration_ms=952, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:12:51], mode=BUILD, duration=0:00:00.725, duration_ms=725, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:14:25], mode=BUILD, duration=0:00:00.642, duration_ms=642, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:16:16], mode=BUILD, duration=0:00:00.636, duration_ms=636, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:19:33], mode=BUILD, duration=0:00:00.627, duration_ms=627, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:33:04], mode=BUILD, duration=0:00:00.583, duration_ms=583, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:33:20], mode=BUILD, duration=0:00:00.634, duration_ms=634, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:34:38], mode=BUILD, duration=0:00:00.713, duration_ms=713, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:35:58], mode=BUILD, duration=0:00:00.653, duration_ms=653, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:39:28], mode=BUILD, duration=0:00:00.640, duration_ms=640, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:41:45], mode=BUILD, duration=0:00:00.692, duration_ms=692, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:42:55], mode=BUILD, duration=0:00:00.647, duration_ms=647, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:43:06], mode=BUILD, duration=0:00:00.631, duration_ms=631, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 14:44:37], mode=BUILD, duration=0:00:00.707, duration_ms=707, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 15:08:54], mode=BUILD, duration=0:00:00.875, duration_ms=875, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 15:51:56], mode=BUILD, duration=0:00:02.653, duration_ms=2653, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 15:54:08], mode=BUILD, duration=0:00:00.707, duration_ms=707, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 16:04:17], mode=BUILD, duration=0:00:00.885, duration_ms=885, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}
+timestamp=[2024-01-24 16:05:06], mode=BUILD, duration=0:00:00.125, duration_ms=125, data={name=Freertos_Inclinometer, configuration=Debug, clean_build=false}

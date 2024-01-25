@@ -22,3 +22,4 @@ platform active {Nexysa7fpga}
 bsp reload
 platform config -updatehw {C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/inclinometer_rtos.xsa}
 platform generate -domains 
+platform generate

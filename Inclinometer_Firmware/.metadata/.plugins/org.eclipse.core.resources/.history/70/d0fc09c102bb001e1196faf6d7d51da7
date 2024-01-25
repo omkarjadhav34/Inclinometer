@@ -1,0 +1,325 @@
+/**
+ * @file 	main.c
+ * @author 	Omkar Jadhav (omjadhav@pdx.edu)
+ *
+ * @brief	The header file contains prototypes for MPU6050 sensor
+ *
+ * @rev	 1.0  - Created file
+ * 			  - Added platform initialization, MPU6050 Sensor I2C initialization, UART Support
+ */
+/******************* File Includes **************************************/
+#include <stdio.h>
+#include <string.h>
+#include "nexys4io.h"
+#include "xplatform_info.h"
+#include "xil_printf.h"
+#include "xuartlite.h"
+#include "xiic.h"
+#include "MPU6050/mpu6050.h"
+#include "FreeRTOS.h"
+#include "task.h"
+
+
+/****************** Macro Definitions ***********************************/
+#define 	RUN  					0x1
+#define 	TEST					0x2
+#define 	UP						0x4
+#define		DOWN					0x8
+#define		LEFT					0x10
+#define		RIGHT					0x20
+#define 	TIMER_ID				1
+#define 	DELAY_10_SECONDS		10000UL
+#define 	DELAY_1_SECOND			1000UL
+#define 	TIMER_CHECK_THRESHOLD	9
+
+
+/****************** Global Declarations *******************************/
+typedef struct
+{
+	int target_angle;
+	int currAngle;
+	int mode;
+	int valid;
+} taskParameters_t;
+
+XUartLite uart;
+XUartLite_Config uart_cfg;
+XIic i2c;
+XIic_Config i2c_cfg;
+MPU6050 mpu6050;
+static TaskHandle_t xMenuTask;
+static TaskHandle_t xDataTask;
+static TaskHandle_t xPIDTask;
+static TaskHandle_t xUARTTask;
+static taskParameters_t taskParam;
+
+/****************** Task Decalarations *********************************/
+void prvMenuTask(void *parameters);
+void prvGyroDataTask(void *parameters);
+void prvPIDTask(void *parameters);
+
+
+/****************** Function Prototypes *********************************/
+int platform_init();
+int i2c_init();
+int uart_init();
+void run();
+void test();
+
+
+int main()
+{
+	/*
+	 * Steps to build firmware:
+	 * 1. Platform initialization - Contains uart, i2c initialization
+	 * 2. Test UART setup with the console, terminal
+	 * 3. Test Sensor integration by reading the device code
+	 * 4. Display Menu module - Contains test mode and the run mode. User should specify the angle as a setpoint
+	 * 5. Keep waiting for the user to start the run based on a character
+	 * 6. Run - Mode:
+	 * 		a. Get sensor readings
+	 * 		b. PID Control
+	 * 		c. Display the error on the leds
+	 * 		d. Check if the setpoint has been increased by monitoring the button value
+	 */
+
+	if (platform_init() != XST_SUCCESS)
+	{
+		xil_printf("Platform Initialization failed \n\r");
+	}
+
+	mpu6050_init(&i2c, &mpu6050);
+	mpu6050_gyroCfg(&i2c, &mpu6050);
+
+	xTaskCreate( 	prvMenuTask, 						/* The function that implements the task. */
+					( const char * ) "Display Menu", 	/* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 			/* The stack allocated to the task. */
+					NULL, 								/* The task parameter is not used, so set to NULL. */
+					2,					/* The task runs at the idle priority. */
+					&xMenuTask );
+
+	xTaskCreate(	prvGyroDataTask,
+				 	( const char * ) "Get inclination",
+					configMINIMAL_STACK_SIZE,
+					NULL,
+					2,
+					&xDataTask );
+
+	xTaskCreate( 	prvPIDTask, 						/* The function that implements the task. */
+					( const char * ) "PID Controller", 	/* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 			/* The stack allocated to the task. */
+					NULL, 								/* The task parameter is not used, so set to NULL. */
+					2,									/* The task runs at the idle priority. */
+					&xPIDTask );
+
+	/* Initially only run the Menu task. This helps to set the set point and be in run mode.
+	 * Gyro data task can be resumed in the menu task while PID Controller task can be resumed in the gyro data task
+	 */
+	vTaskSuspend( xDataTask );
+	vTaskSuspend( xPIDTask );
+
+	// Start the scheduler and only run the menu. The user should be able to read and set the pid parameters
+	vTaskStartScheduler();
+
+	xil_printf("Memory initialization failed to start the scheduler\n\r");
+
+	// Infinite for loop in case the PC returns from the vTaskStartScheduler
+	for( ; ; );
+	return 0;
+}
+
+void prvMenuTask(void *parameters)
+{
+	char c, mode = 0;
+	int angle = 0;
+
+	for( ; ; )
+	{
+			xil_printf("Welcome to Inclinometerrrrrr Menu\n\r\n\r");
+			xil_printf("Please select any one option:\n\r");
+			xil_printf("1. Run Mode - R\n\r");
+			xil_printf("2. Test Mode - T\n\r");
+
+			mode = inbyte();
+
+			while(mode == '\0') mode = inbyte();
+			xil_printf("c:%c\n\r", mode);
+
+			switch(mode)
+			{
+				case 'r':
+				case 'R':
+							xil_printf("Enter the target angle (in degrees) (-160 to 160)\n\r");
+							c = inbyte();
+							while(c == '\0') c = inbyte();
+							xil_printf("c: %d\n\r", c);
+							angle = (int)(c - '0');
+							angle = angle * 10 + (inbyte() - '0');
+							angle = angle * 10 + (inbyte() - '0');
+							break;
+				case 't':
+				case 'T':
+							xil_printf("Test Mode:\n\r");
+							// gyro_calib();
+							break;
+			};
+
+			xil_printf("ANGLE: %d\n\r", (int)angle);
+			taskParam.target_angle = angle;
+			taskParam.mode = (mode == 'r')? RUN:TEST;
+			xil_printf("Mode: %s(%d)\n\r", (mode == 'r')? "RUN":"TEST", mode);
+
+			if(mode == 'r')
+			{
+				vTaskResume(xDataTask);
+				vTaskSuspend(xMenuTask);
+			}
+
+	}
+}
+
+void prvGyroDataTask(void *parameters)
+{
+	int currAngle;
+	int axis = SET_AXIS_X;
+
+	for( ; ; )
+	{
+		xil_printf("Did the gyro data start before run\n\r");
+		mpu6050_getData(&i2c, &mpu6050, currAngle, axis);
+
+		// Might need a mutex for this variable.
+		// The variable can be read constantly by the pid task
+		taskParam.valid = true;
+
+		vTaskResume(xPIDTask);
+		vTaskSuspend(NULL);
+
+	}
+
+}
+
+void prvPIDTask(void *parameters)
+{
+	float kp = 0.01f;
+    float ki = 0.0002f;
+    float kd = 0.0001f;
+    float time_step = 0.002f;
+    float target_angle = (float) taskParam.target_angle;
+    float currAngle = (float) taskParam.currAngle;
+    float integralVal = 0.0f;
+    float error = 0.0f;
+    float prev_error = 0.0f;
+    float angle_new = 0.0f;
+    int btns_val = 0;
+
+    for( ; ; )
+    {
+    	xil_printf("Yes it definitely started FAILED!!!!!!!!!!!\n\r");
+    	if (taskParam.mode == RUN && taskParam.valid == true)
+    	{
+    		//xil_printf("target_angle:%d currAngle: %d\n\r", taskParam.target_angle, taskParam.currAngle);
+
+			prev_error = error;
+			error = target_angle - (currAngle);
+			//xil_printf("error: %d\n\r", error);
+
+			integralVal += error * time_step;
+
+			//xil_printf("integral_val: %d\n\r", (int)integralVal);
+
+			angle_new = currAngle + kp * error + kd * ((error - prev_error) / time_step) + ki * integralVal;
+
+			NX4IO_setLEDs((int) (target_angle - angle_new));
+			taskParam.valid = false;
+			//xil_printf("angle_new: %d \n\r", (int)angle_new);
+
+			btns_val = NX4IO_getBtns();
+
+			switch(btns_val)
+			{
+				case UP:
+					target_angle += 10;
+					break;
+
+				case DOWN:
+					target_angle -= 10;
+					break;
+
+				/* Need to add the logic here
+				 * Decide if buttons read should be in a different task
+				 */
+				case LEFT:
+					break;
+				case RIGHT:
+					break;
+
+			};
+
+			xil_printf("angle_new: %d \n\r", (int)angle_new);
+			taskParam.target_angle = target_angle;
+			vTaskResume(xMenuTask);
+			vTaskSuspend(NULL);
+
+    	}
+    }
+}
+
+int platform_init()
+{
+	uint32_t status;
+
+	//ASSERT(XPLAT_MICROBLAZE != XGetPlatform_Info());
+	//ASSERT(XST_SUCCESS != uart_init());
+	//ASSERT(XST_SUCCESS != i2c_init());
+
+	// initialize the Nexys4 driver and (some of)the devices
+	status = (uint32_t) NX4IO_initialize(XPAR_NEXYS4IO_0_S00_AXI_BASEADDR);
+
+	if (status != XST_SUCCESS)
+	{
+		return XST_FAILURE;
+	}
+
+	NX4IO_setLEDs(0x13);
+
+	return status;
+}
+
+
+int uart_init(void)
+{
+	// Configure the uart Module
+	uart.IsReady= true;
+	uart.RegBaseAddress = XPAR_UARTLITE_1_BASEADDR;
+	XUartLite_Config uart_cfg;
+	uart_cfg.BaudRate = 115200;
+	uart_cfg.DataBits= 8;
+	uart_cfg.RegBaseAddr = XPAR_UARTLITE_1_BASEADDR;
+	uart_cfg.UseParity = false;
+	uart_cfg.ParityOdd = true;
+
+	// Initialize the uart
+	XUartLite_CfgInitialize(&uart, &uart_cfg, XPAR_UARTLITE_1_BASEADDR);
+
+	return XUartLite_Initialize(&uart, XPAR_UARTLITE_1_DEVICE_ID);
+}
+
+int i2c_init(void)
+{
+	i2c_cfg.DeviceId		= XPAR_AXI_IIC_0_DEVICE_ID;	  	/**< Unique ID  of device */
+	i2c_cfg.BaseAddress 	= XPAR_AXI_IIC_0_BASEADDR;  	/**< Device base address */
+	i2c_cfg.Has10BitAddr 	= XPAR_AXI_IIC_0_TEN_BIT_ADR; 	/**< Does device have 10 bit address decoding */
+	i2c_cfg.GpOutWidth 		= XPAR_AXI_IIC_0_GPO_WIDTH;	  	/**< Number of bits in general purpose output */
+
+	i2c.BaseAddress 		= XPAR_AXI_IIC_0_BASEADDR;  	/**< Device base address */
+	i2c.Has10BitAddr 		= XPAR_AXI_IIC_0_TEN_BIT_ADR; 	/**< Does device have 10 bit address decoding */
+	i2c.GpOutWidth 			= XPAR_AXI_IIC_0_GPO_WIDTH;	  	/**< Number of bits in general purpose output */
+
+	XIic_CfgInitialize(&i2c, &i2c_cfg, XPAR_AXI_IIC_0_BASEADDR);
+
+	return XIic_Initialize(&i2c, XPAR_IIC_0_DEVICE_ID);
+}
+
+
+

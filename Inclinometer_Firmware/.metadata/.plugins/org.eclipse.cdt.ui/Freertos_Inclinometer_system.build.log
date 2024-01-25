@@ -1,6 +1,6 @@
-20:19:30 **** Build of configuration Debug for project Freertos_Inclinometer_system ****
+17:28:50 **** Build of configuration Debug for project Freertos_Inclinometer_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-20:19:30 Build Finished (took 221ms)
+17:28:50 Build Finished (took 172ms)
 

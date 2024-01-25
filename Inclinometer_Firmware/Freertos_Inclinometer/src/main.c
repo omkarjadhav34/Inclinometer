@@ -1,12 +1,29 @@
 /**
- * @file 	main.c
- * @author 	Omkar Jadhav (omjadhav@pdx.edu)
- *
- * @brief	The header file contains prototypes for MPU6050 sensor
- *
- * @rev	 1.0  - Created file
- * 			  - Added platform initialization, MPU6050 Sensor I2C initialization, UART Support
- */
+* @file main.c
+*
+* @author Omkar Jadhav (omjadhav@pdx.edu)
+* @copyright Portland State University, 2024
+*
+* @brief
+* This program implements a FREERTOS application for angle measurment using MPU6050 Gyro Sensor.
+*
+* The program creates 4 tasks - MenuTask, Data Task, PID Task, Exit Task. Initially, only Menu
+* Task runs while the other tasks remain suspended. The MENU Task expects user interaction on
+* UART Terminal to set mode(Run or Test), if RUN Mode - set the target angle.
+*
+*
+* <pre>
+* MODIFICATION HISTORY:
+* ---------------------
+* Ver   Who             Date            Changes
+* ----- ---- -------- -----------------------------------------------
+* 1.00	Omkar Jadhav	22-Jan-2024		Created Menu, Data, PID Task
+* 1.10	Omkar Jadhav	23-Jan-2024		Added Data, PID Task Suspend
+* 1.20	Omkar Jadhav	24-Jan-2024		Fixed Task Resume Bug and added Exit Task
+* 1.21	Omkar Jadhav	24-Jan-2024		Added Comments and Function Header
+*</pre>
+*
+******************************************************************************/
 /******************* File Includes **************************************/
 #include <stdio.h>
 #include <string.h>
@@ -50,13 +67,14 @@ MPU6050 mpu6050;
 static TaskHandle_t xMenuTask;
 static TaskHandle_t xDataTask;
 static TaskHandle_t xPIDTask;
-static TaskHandle_t xUARTTask;
+static TaskHandle_t xExitRunTask;
 static taskParameters_t taskParam;
 
 /****************** Task Decalarations *********************************/
 void prvMenuTask(void *parameters);
 void prvGyroDataTask(void *parameters);
 void prvPIDTask(void *parameters);
+void prvExitRunTask(void *parameters);
 
 
 /****************** Function Prototypes *********************************/
@@ -91,6 +109,7 @@ int main()
 	mpu6050_init(&i2c, &mpu6050);
 	mpu6050_gyroCfg(&i2c, &mpu6050);
 
+	// Create Tasks and allocate memory
 	xTaskCreate( 	prvMenuTask, 						/* The function that implements the task. */
 					( const char * ) "Display Menu", 	/* Text name for the task, provided to assist debugging only. */
 					configMINIMAL_STACK_SIZE, 			/* The stack allocated to the task. */
@@ -112,11 +131,19 @@ int main()
 					2,									/* The task runs at the idle priority. */
 					&xPIDTask );
 
+	xTaskCreate(	prvExitRunTask,
+					(const char *) "UART READ TASK",
+					configMINIMAL_STACK_SIZE,
+					NULL,
+					2,
+					&xExitRunTask );
+
 	/* Initially only run the Menu task. This helps to set the set point and be in run mode.
-	 * Gyro data task can be resumed in the menu task while PID Controller task can be resumed in the gyro data task
+	 * Gyro data task, PID Controller task, ExitRun Task can be resumed in the menu task.
 	 */
 	vTaskSuspend( xDataTask );
 	vTaskSuspend( xPIDTask );
+	vTaskSuspend( xExitRunTask );
 
 	// Start the scheduler and only run the menu. The user should be able to read and set the pid parameters
 	vTaskStartScheduler();
@@ -128,6 +155,16 @@ int main()
 	return 0;
 }
 
+/****************************************************************************/
+/**
+* Menu Display Task
+*
+* Reads mode given from the user over UART Terminal at 115200 baud rate.
+* In RUN Mode, get the angle (in Degrees) from the user. Resumes the other tasks
+* and suspend itself.
+*
+* @note:  2-digit angle should be provided as 0xx
+*****************************************************************************/
 void prvMenuTask(void *parameters)
 {
 	char c, mode = 0;
@@ -169,14 +206,26 @@ void prvMenuTask(void *parameters)
 			taskParam.mode = (mode == 'r')? RUN:TEST;
 			xil_printf("Mode: %s(%d)\n\r", (mode == 'r')? "RUN":"TEST", mode);
 
+			angle = 0;
+
+
 			if(mode == 'r')
 			{
 				vTaskResume(xDataTask);
+				vTaskResume(xPIDTask);
+				vTaskResume(xExitRunTask);
 				vTaskSuspend(xMenuTask);
 			}
 
 	}
 }
+
+/****************************************************************************/
+/**
+* MPU6050 Gyro Data Task
+*
+* Reads angle from the MPU6050 sensor over I2C.
+*****************************************************************************/
 
 void prvGyroDataTask(void *parameters)
 {
@@ -185,18 +234,53 @@ void prvGyroDataTask(void *parameters)
 
 	for( ; ; )
 	{
-		xil_printf("Did the gyro data start before run\n\r");
-		mpu6050_getData(&i2c, &mpu6050, currAngle, axis);
+		//xil_printf("Did the gyro data start before run\n\r");
+		if(taskParam.valid == false)
+		{
+			mpu6050_getData(&i2c, &mpu6050, &currAngle, axis);
 
-		// Might need a mutex for this variable.
-		// The variable can be read constantly by the pid task
-		taskParam.valid = true;
-
-		vTaskResume(xPIDTask);
-		vTaskSuspend(NULL);
+			// Might need a mutex for this variable.
+			// The variable can be read constantly by the pid task
+			xil_printf("Valid: %d\n\r", taskParam.valid);
+			taskParam.currAngle = currAngle;
+			taskParam.valid = true;
+			//vTaskResume(xPIDTask);
+			//vTaskSuspend(NULL);
+		}
 	}
 
 }
+
+/****************************************************************************/
+/**
+* Exit Run  Task
+*****************************************************************************/
+
+void prvExitRunTask(void *parameters)
+{
+	u16 c = 0x0000;
+
+	for( ; ; )
+	{
+		//xil_printf("c: %c\n\r", c);
+		c = NX4IO_getSwitches();
+		//xil_printf("c: %c\n\r", c);
+
+		if(c != 0)
+		{
+			xil_printf("c: %d\n\r", c);
+			vTaskSuspend(xDataTask);
+			vTaskSuspend(xPIDTask);
+			vTaskResume(xMenuTask);
+			vTaskSuspend(NULL);
+		}
+	}
+}
+
+/****************************************************************************/
+/**
+* PID Controller Task
+*****************************************************************************/
 
 void prvPIDTask(void *parameters)
 {
@@ -214,7 +298,7 @@ void prvPIDTask(void *parameters)
 
     for( ; ; )
     {
-    	xil_printf("Yes it definitely started FAILED!!!!!!!!!!!\n\r");
+    	//xil_printf("Yes it definitely started FAILED!!!!!!!!!!!\n\r");
     	if (taskParam.mode == RUN && taskParam.valid == true)
     	{
     		//xil_printf("target_angle:%d currAngle: %d\n\r", taskParam.target_angle, taskParam.currAngle);
@@ -230,8 +314,9 @@ void prvPIDTask(void *parameters)
 			angle_new = currAngle + kp * error + kd * ((error - prev_error) / time_step) + ki * integralVal;
 
 			NX4IO_setLEDs((int) (target_angle - angle_new));
+
 			taskParam.valid = false;
-			//xil_printf("angle_new: %d \n\r", (int)angle_new);
+			xil_printf("Valid_pid: %d \n\r", taskParam.valid);
 
 			btns_val = NX4IO_getBtns();
 
@@ -250,6 +335,7 @@ void prvPIDTask(void *parameters)
 				 */
 				case LEFT:
 					break;
+
 				case RIGHT:
 					break;
 
@@ -257,8 +343,8 @@ void prvPIDTask(void *parameters)
 
 			xil_printf("angle_new: %d \n\r", (int)angle_new);
 			taskParam.target_angle = target_angle;
-			vTaskResume(xMenuTask);
-			vTaskSuspend(NULL);
+			//vTaskResume(xMenuTask);
+			//vTaskSuspend(NULL);
 
     	}
     }
