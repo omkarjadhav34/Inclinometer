@@ -101,11 +101,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/inclinometer/ip/inclinometer_axi_iic_0_1/sim/inclinometer_axi_iic_0_1.vhd" \
 -endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/inclinometer/ip/inclinometer_bidirec_0_0/sim/inclinometer_bidirec_0_0.v" \
-  "../../../bd/inclinometer/ip/inclinometer_bidirec_0_1/sim/inclinometer_bidirec_0_1.v" \
-  "../../../bd/inclinometer/sim/inclinometer.v" \
--endlib
 -makelib xcelium_lib/microblaze_v11_0_10 \
   "../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/1f7b/hdl/microblaze_v11_0_vh_rfs.vhd" \
 -endlib
@@ -131,6 +126,9 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/inclinometer/ip/inclinometer_lmb_bram_3/sim/inclinometer_lmb_bram_3.v" \
+  "../../../bd/inclinometer/ip/inclinometer_bidirec_0_0/sim/inclinometer_bidirec_0_0.v" \
+  "../../../bd/inclinometer/ip/inclinometer_bidirec_1_0/sim/inclinometer_bidirec_1_0.v" \
+  "../../../bd/inclinometer/sim/inclinometer.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

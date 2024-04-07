@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Sun Jan 21 17:15:38 2024
 // Host        : Omkar running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top inclinometer_ilmb_bram_if_cntlr_3 -prefix
+//               inclinometer_ilmb_bram_if_cntlr_3_ inclinometer_ilmb_bram_if_cntlr_3_sim_netlist.v
 // Design      : inclinometer_ilmb_bram_if_cntlr_3
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -221,7 +221,7 @@ endmodule
 (* C_MASK = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
 (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_NUM_LMB = "1" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) 
 (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_CTRL_HIGHADDR = "32'b00000000000000000000000000000000" *) 
-(* C_UE_FAILING_REGISTERS = "0" *) (* C_WRITE_ACCESS = "2" *) (* ORIG_REF_NAME = "lmb_bram_if_cntlr" *) 
+(* C_UE_FAILING_REGISTERS = "0" *) (* C_WRITE_ACCESS = "2" *) 
 module inclinometer_ilmb_bram_if_cntlr_3_lmb_bram_if_cntlr
    (LMB_Clk,
     LMB_Rst,

@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Jan 21 17:23:28 2024
-# Process ID: 29936
-# Current directory: C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1
+# Start of session at: Tue Jan 30 16:44:16 2024
+# Process ID: 13760
+# Current directory: C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1
 # Command line: vivado.exe -log inclinometer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source inclinometer.tcl
-# Log file: C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/inclinometer.vds
-# Journal file: C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1\vivado.jou
+# Log file: C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/inclinometer.vds
+# Journal file: C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1\vivado.jou
 # Running On: Omkar, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 10, Host memory: 16849 MB
 #-----------------------------------------------------------
 source inclinometer.tcl -notrace
@@ -15,9 +15,9 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/jadha/OneDrive/Desktop/ECE_544_ESD_with_FPGA/Assignments/ece544w23_project1_release_r1_0/IP/ece544ip_w23/nexys4io_3_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.cache/ip 
-Command: read_checkpoint -auto_incremental -incremental C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/utils_1/imports/synth_1/inclinometer.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/utils_1/imports/synth_1/inclinometer.dcp for incremental synthesis
+Current IP cache path is c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/utils_1/imports/synth_1/inclinometer.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/utils_1/imports/synth_1/inclinometer.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top inclinometer -part xc7a100tcsg324-1
 Starting synth_design
@@ -28,106 +28,106 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 33384
+INFO: [Synth 8-7075] Helper process launched with PID 30996
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:04 . Memory (MB): peak = 1309.156 ; gain = 408.719
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1310.418 ; gain = 410.773
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'inclinometer' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:12]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_axi_iic_0_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_axi_iic_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_axi_iic_0_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_axi_iic_0_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'inclinometer_axi_iic_0_1' is unconnected for instance 'axi_iic_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:271]
-WARNING: [Synth 8-7071] port 'gpo' of module 'inclinometer_axi_iic_0_1' is unconnected for instance 'axi_iic_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:271]
-WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'inclinometer_axi_iic_0_1' has 27 connections declared, but only 25 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:271]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_axi_timer_0_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_axi_timer_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_axi_timer_0_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_axi_timer_0_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'generateout0' of module 'inclinometer_axi_timer_0_1' is unconnected for instance 'axi_timer_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
-WARNING: [Synth 8-7071] port 'generateout1' of module 'inclinometer_axi_timer_0_1' is unconnected for instance 'axi_timer_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
-WARNING: [Synth 8-7071] port 'pwm0' of module 'inclinometer_axi_timer_0_1' is unconnected for instance 'axi_timer_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
-WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'inclinometer_axi_timer_0_1' has 26 connections declared, but only 23 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_axi_uartlite_0_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_axi_uartlite_0_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_bidirec_0_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_bidirec_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_bidirec_0_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_bidirec_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_bidirec_0_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_bidirec_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_bidirec_0_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_bidirec_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_clk_wiz_1_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_clk_wiz_1_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_clk_wiz_1_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'clk_out2' of module 'inclinometer_clk_wiz_1_0' is unconnected for instance 'clk_wiz_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:354]
-WARNING: [Synth 8-7023] instance 'clk_wiz_1' of module 'inclinometer_clk_wiz_1_0' has 5 connections declared, but only 4 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:354]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_mdm_1_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_mdm_1_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_mdm_1_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_mdm_1_1_stub.v:5]
-WARNING: [Synth 8-7071] port 'Interrupt' of module 'inclinometer_mdm_1_1' is unconnected for instance 'mdm_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:359]
-WARNING: [Synth 8-7023] instance 'mdm_1' of module 'inclinometer_mdm_1_1' has 30 connections declared, but only 29 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:359]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_microblaze_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_microblaze_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_axi_intc_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_microblaze_0_axi_intc_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_axi_intc_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_microblaze_0_axi_intc_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_axi_periph_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:696]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_18BCLPC' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1818]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_18BCLPC' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1818]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_11WORVK' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1950]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_11WORVK' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1950]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1DD1T28' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2082]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1DD1T28' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2082]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1AA8EQO' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2228]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1AA8EQO' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2228]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1I4OFKW' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2360]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1I4OFKW' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2360]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1MW29EO' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2492]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1MW29EO' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2492]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1TU2HY8' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2638]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1TU2HY8' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2638]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10BQQ7N' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:3004]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10BQQ7N' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:3004]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_xbar_2' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_xbar_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_xbar_2' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_xbar_2_stub.v:5]
-WARNING: [Synth 8-689] width (18) of port connection 'm_axi_arprot' does not match port width (21) of module 'inclinometer_xbar_2' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1779]
-WARNING: [Synth 8-689] width (18) of port connection 'm_axi_awprot' does not match port width (21) of module 'inclinometer_xbar_2' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1783]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_axi_periph_1' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:696]
-WARNING: [Synth 8-7071] port 'M05_AXI_araddr' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_arvalid' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_awaddr' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_awvalid' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_bready' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_rready' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_wdata' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_wstrb' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7071] port 'M05_AXI_wvalid' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-WARNING: [Synth 8-7023] instance 'microblaze_0_axi_periph' of module 'inclinometer_microblaze_0_axi_periph_1' has 160 connections declared, but only 149 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_UNVFYN' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2770]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_dlmb_bram_if_cntlr_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_dlmb_bram_if_cntlr_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_dlmb_bram_if_cntlr_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_dlmb_bram_if_cntlr_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_dlmb_v10_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_dlmb_v10_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_dlmb_v10_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_dlmb_v10_3_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'inclinometer_dlmb_v10_3' is unconnected for instance 'dlmb_v10' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2916]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'inclinometer_dlmb_v10_3' has 25 connections declared, but only 24 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2916]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_ilmb_bram_if_cntlr_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_ilmb_bram_if_cntlr_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_ilmb_bram_if_cntlr_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_ilmb_bram_if_cntlr_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_ilmb_v10_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_ilmb_v10_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_ilmb_v10_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_ilmb_v10_3_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'inclinometer_ilmb_v10_3' is unconnected for instance 'ilmb_v10' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2962]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'inclinometer_ilmb_v10_3' has 25 connections declared, but only 24 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2962]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_lmb_bram_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_lmb_bram_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_lmb_bram_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_lmb_bram_3_stub.v:5]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'inclinometer_lmb_bram_3' is unconnected for instance 'lmb_bram' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2987]
-WARNING: [Synth 8-7071] port 'rstb_busy' of module 'inclinometer_lmb_bram_3' is unconnected for instance 'lmb_bram' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2987]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'inclinometer_lmb_bram_3' has 16 connections declared, but only 14 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2987]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_UNVFYN' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2770]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_xlconcat_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_xlconcat_1/synth/inclinometer_microblaze_0_xlconcat_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_xlconcat_1' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_xlconcat_1/synth/inclinometer_microblaze_0_xlconcat_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_nexys4io_0_2' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_nexys4io_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_nexys4io_0_2' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_nexys4io_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'inclinometer_rst_clk_wiz_1_100M_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-29936-Omkar/realtime/inclinometer_rst_clk_wiz_1_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'inclinometer_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:685]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'inclinometer_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:685]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'inclinometer_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:685]
-INFO: [Synth 8-6155] done synthesizing module 'inclinometer' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:12]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:12]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_axi_iic_0_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_axi_iic_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_axi_iic_0_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_axi_iic_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'iic2intc_irpt' of module 'inclinometer_axi_iic_0_1' is unconnected for instance 'axi_iic_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:271]
+WARNING: [Synth 8-7071] port 'gpo' of module 'inclinometer_axi_iic_0_1' is unconnected for instance 'axi_iic_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:271]
+WARNING: [Synth 8-7023] instance 'axi_iic_0' of module 'inclinometer_axi_iic_0_1' has 27 connections declared, but only 25 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:271]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_axi_timer_0_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_axi_timer_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_axi_timer_0_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_axi_timer_0_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'inclinometer_axi_timer_0_1' is unconnected for instance 'axi_timer_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'inclinometer_axi_timer_0_1' is unconnected for instance 'axi_timer_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'inclinometer_axi_timer_0_1' is unconnected for instance 'axi_timer_0' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
+WARNING: [Synth 8-7023] instance 'axi_timer_0' of module 'inclinometer_axi_timer_0_1' has 26 connections declared, but only 23 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:297]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_axi_uartlite_0_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_axi_uartlite_0_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_bidirec_0_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_bidirec_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_bidirec_0_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_bidirec_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_bidirec_1_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_bidirec_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_bidirec_1_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_bidirec_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_clk_wiz_1_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_clk_wiz_1_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_clk_wiz_1_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'clk_out2' of module 'inclinometer_clk_wiz_1_0' is unconnected for instance 'clk_wiz_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:354]
+WARNING: [Synth 8-7023] instance 'clk_wiz_1' of module 'inclinometer_clk_wiz_1_0' has 5 connections declared, but only 4 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:354]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_mdm_1_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_mdm_1_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_mdm_1_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_mdm_1_1_stub.v:5]
+WARNING: [Synth 8-7071] port 'Interrupt' of module 'inclinometer_mdm_1_1' is unconnected for instance 'mdm_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:359]
+WARNING: [Synth 8-7023] instance 'mdm_1' of module 'inclinometer_mdm_1_1' has 30 connections declared, but only 29 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:359]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_microblaze_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_microblaze_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_axi_intc_1' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_microblaze_0_axi_intc_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_axi_intc_1' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_microblaze_0_axi_intc_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_axi_periph_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:696]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_18BCLPC' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1818]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_18BCLPC' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1818]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_11WORVK' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1950]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_11WORVK' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1950]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1DD1T28' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2082]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1DD1T28' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2082]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1AA8EQO' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2228]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1AA8EQO' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2228]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1I4OFKW' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2360]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1I4OFKW' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1MW29EO' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2492]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1MW29EO' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2492]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1TU2HY8' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2638]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1TU2HY8' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2638]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10BQQ7N' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:3004]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10BQQ7N' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:3004]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_xbar_2' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_xbar_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_xbar_2' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_xbar_2_stub.v:5]
+WARNING: [Synth 8-689] width (18) of port connection 'm_axi_arprot' does not match port width (21) of module 'inclinometer_xbar_2' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1779]
+WARNING: [Synth 8-689] width (18) of port connection 'm_axi_awprot' does not match port width (21) of module 'inclinometer_xbar_2' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:1783]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_axi_periph_1' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:696]
+WARNING: [Synth 8-7071] port 'M05_AXI_araddr' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_arprot' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_arvalid' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_awaddr' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_awprot' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_awvalid' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_bready' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_rready' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_wdata' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_wstrb' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7071] port 'M05_AXI_wvalid' of module 'inclinometer_microblaze_0_axi_periph_1' is unconnected for instance 'microblaze_0_axi_periph' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+WARNING: [Synth 8-7023] instance 'microblaze_0_axi_periph' of module 'inclinometer_microblaze_0_axi_periph_1' has 160 connections declared, but only 149 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:470]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_UNVFYN' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2770]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_dlmb_bram_if_cntlr_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_dlmb_bram_if_cntlr_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_dlmb_bram_if_cntlr_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_dlmb_bram_if_cntlr_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_dlmb_v10_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_dlmb_v10_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_dlmb_v10_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_dlmb_v10_3_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'inclinometer_dlmb_v10_3' is unconnected for instance 'dlmb_v10' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2916]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'inclinometer_dlmb_v10_3' has 25 connections declared, but only 24 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2916]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_ilmb_bram_if_cntlr_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_ilmb_bram_if_cntlr_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_ilmb_bram_if_cntlr_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_ilmb_bram_if_cntlr_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_ilmb_v10_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_ilmb_v10_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_ilmb_v10_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_ilmb_v10_3_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'inclinometer_ilmb_v10_3' is unconnected for instance 'ilmb_v10' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2962]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'inclinometer_ilmb_v10_3' has 25 connections declared, but only 24 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2962]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_lmb_bram_3' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_lmb_bram_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_lmb_bram_3' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_lmb_bram_3_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'inclinometer_lmb_bram_3' is unconnected for instance 'lmb_bram' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2987]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'inclinometer_lmb_bram_3' is unconnected for instance 'lmb_bram' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2987]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'inclinometer_lmb_bram_3' has 16 connections declared, but only 14 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2987]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_UNVFYN' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:2770]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_microblaze_0_xlconcat_1' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_xlconcat_1/synth/inclinometer_microblaze_0_xlconcat_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_microblaze_0_xlconcat_1' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_xlconcat_1/synth/inclinometer_microblaze_0_xlconcat_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_nexys4io_0_2' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_nexys4io_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_nexys4io_0_2' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_nexys4io_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'inclinometer_rst_clk_wiz_1_100M_0' [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/.Xil/Vivado-13760-Omkar/realtime/inclinometer_rst_clk_wiz_1_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'inclinometer_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:685]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'inclinometer_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:685]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'inclinometer_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:685]
+INFO: [Synth 8-6155] done synthesizing module 'inclinometer' (0#1) [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/synth/inclinometer.v:12]
 WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -230,98 +230,92 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1409.973 ; gain = 509.535
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1409.578 ; gain = 509.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1409.973 ; gain = 509.535
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1409.578 ; gain = 509.934
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1409.973 ; gain = 509.535
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1409.578 ; gain = 509.934
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1409.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1409.578 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2/inclinometer_xbar_2_in_context.xdc] for cell 'microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2/inclinometer_xbar_2_in_context.xdc] for cell 'microblaze_0_axi_periph/xbar'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_in_context.xdc] for cell 'microblaze_0_axi_intc'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_in_context.xdc] for cell 'microblaze_0_axi_intc'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1/inclinometer_mdm_1_0_in_context.xdc] for cell 'mdm_1'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1/inclinometer_mdm_1_0_in_context.xdc] for cell 'mdm_1'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc] for cell 'clk_wiz_1'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc] for cell 'clk_wiz_1'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_0_100M_0_in_context.xdc] for cell 'rst_clk_wiz_1_100M'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_0_100M_0_in_context.xdc] for cell 'rst_clk_wiz_1_100M'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_0_in_context.xdc] for cell 'axi_timer_0'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_0_in_context.xdc] for cell 'axi_timer_0'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_in_context.xdc] for cell 'axi_uartlite_0'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_in_context.xdc] for cell 'axi_uartlite_0'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_0_in_context.xdc] for cell 'nexys4io_0'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_0_in_context.xdc] for cell 'nexys4io_0'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_0_in_context.xdc] for cell 'axi_iic_0'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_0_in_context.xdc] for cell 'axi_iic_0'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_in_context.xdc] for cell 'bidirec_0'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_in_context.xdc] for cell 'bidirec_0'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_1/inclinometer_bidirec_0_1/inclinometer_bidirec_0_1_in_context.xdc] for cell 'bidirec_1'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_1/inclinometer_bidirec_0_1/inclinometer_bidirec_0_1_in_context.xdc] for cell 'bidirec_1'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3/inclinometer_microblaze_0_2_in_context.xdc] for cell 'microblaze_0'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3/inclinometer_microblaze_0_2_in_context.xdc] for cell 'microblaze_0'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_v10_3/inclinometer_ilmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_v10_3/inclinometer_ilmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3_in_context.xdc] for cell 'microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3_in_context.xdc] for cell 'microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:3]
-WARNING: [Vivado 12-584] No ports matched 'clk'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:4]
-WARNING: [Vivado 12-584] No ports matched 'btnCpuReset'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:80]
-WARNING: [Vivado 12-584] No ports matched 'JB[0]'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:103]
-WARNING: [Vivado 12-584] No ports matched 'JB[1]'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:104]
-WARNING: [Vivado 12-584] No ports matched 'JB[2]'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:105]
-WARNING: [Vivado 12-584] No ports matched 'JC[2]'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:117]
-WARNING: [Vivado 12-584] No ports matched 'uart_rtl_rxd'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:214]
-WARNING: [Vivado 12-584] No ports matched 'uart_rtl_txd'. [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc:215]
-Finished Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/inclinometer_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/inclinometer_propImpl.xdc].
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2/inclinometer_xbar_2_in_context.xdc] for cell 'microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2/inclinometer_xbar_2_in_context.xdc] for cell 'microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_in_context.xdc] for cell 'microblaze_0_axi_intc'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_in_context.xdc] for cell 'microblaze_0_axi_intc'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1/inclinometer_mdm_1_0_in_context.xdc] for cell 'mdm_1'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1/inclinometer_mdm_1_0_in_context.xdc] for cell 'mdm_1'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc] for cell 'clk_wiz_1'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc] for cell 'clk_wiz_1'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_0_100M_0_in_context.xdc] for cell 'rst_clk_wiz_1_100M'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_0_100M_0_in_context.xdc] for cell 'rst_clk_wiz_1_100M'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_0_in_context.xdc] for cell 'axi_timer_0'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_0_in_context.xdc] for cell 'axi_timer_0'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_in_context.xdc] for cell 'axi_uartlite_0'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_in_context.xdc] for cell 'axi_uartlite_0'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_0_in_context.xdc] for cell 'nexys4io_0'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_2/inclinometer_nexys4io_0_0_in_context.xdc] for cell 'nexys4io_0'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_0_in_context.xdc] for cell 'axi_iic_0'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_0_in_context.xdc] for cell 'axi_iic_0'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3/inclinometer_microblaze_0_2_in_context.xdc] for cell 'microblaze_0'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3/inclinometer_microblaze_0_2_in_context.xdc] for cell 'microblaze_0'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_v10_3/inclinometer_ilmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_v10_3/inclinometer_ilmb_v10_3/inclinometer_dlmb_v10_0_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_in_context.xdc] for cell 'microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3_in_context.xdc] for cell 'microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3_in_context.xdc] for cell 'microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_in_context.xdc] for cell 'bidirec_0'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_in_context.xdc] for cell 'bidirec_0'
+Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0_in_context.xdc] for cell 'bidirec_1'
+Finished Parsing XDC File [c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0_in_context.xdc] for cell 'bidirec_1'
+Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]
+Finished Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/inclinometer_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/inclinometer_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1418.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1430.254 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1418.102 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1430.254 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:21 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sclk_io. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sclk_io. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for sda_io. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sda_io. (constraint file  c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0_in_context.xdc, line 2).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_axi_intc. (constraint file  auto generated constraint).
@@ -333,19 +327,19 @@ Applied set_property KEEP_HIERARCHY = SOFT for axi_timer_0. (constraint file  au
 Applied set_property KEEP_HIERARCHY = SOFT for axi_uartlite_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for nexys4io_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for axi_iic_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for bidirec_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for bidirec_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for bidirec_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for bidirec_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -368,25 +362,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:32 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:33 . Memory (MB): peak = 1430.254 ; gain = 530.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -404,37 +398,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -449,7 +443,7 @@ Report BlackBoxes:
 |3     |inclinometer_axi_timer_0_1           |         1|
 |4     |inclinometer_axi_uartlite_0_0        |         1|
 |5     |inclinometer_bidirec_0_0             |         1|
-|6     |inclinometer_bidirec_0_1             |         1|
+|6     |inclinometer_bidirec_1_0             |         1|
 |7     |inclinometer_clk_wiz_1_0             |         1|
 |8     |inclinometer_mdm_1_1                 |         1|
 |9     |inclinometer_microblaze_0_3          |         1|
@@ -470,7 +464,8 @@ Report Cell Usage:
 |1     |inclinometer_axi_iic_0             |     1|
 |2     |inclinometer_axi_timer_0           |     1|
 |3     |inclinometer_axi_uartlite_0        |     1|
-|4     |inclinometer_bidirec_0             |     2|
+|4     |inclinometer_bidirec_0             |     1|
+|5     |inclinometer_bidirec_1             |     1|
 |6     |inclinometer_clk_wiz_1             |     1|
 |7     |inclinometer_dlmb_bram_if_cntlr    |     1|
 |8     |inclinometer_dlmb_v10              |     1|
@@ -487,24 +482,24 @@ Report Cell Usage:
 |19    |OBUF                               |    39|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:18 . Memory (MB): peak = 1419.375 ; gain = 509.535
-Synthesis Optimization Complete : Time (s): cpu = 00:00:03 ; elapsed = 00:00:19 . Memory (MB): peak = 1419.375 ; gain = 518.938
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:36 . Memory (MB): peak = 1434.734 ; gain = 514.414
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:39 . Memory (MB): peak = 1434.734 ; gain = 535.090
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1426.461 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1446.746 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1435.031 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1451.406 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 4c3f154a
+Synth Design complete, checksum: d3361146
 INFO: [Common 17-83] Releasing license: Synthesis
-85 Infos, 148 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 138 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:31 . Memory (MB): peak = 1435.031 ; gain = 931.184
-INFO: [Common 17-1381] The checkpoint 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/inclinometer.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:52 . Memory (MB): peak = 1451.406 ; gain = 947.223
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/inclinometer.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file inclinometer_utilization_synth.rpt -pb inclinometer_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 21 17:24:11 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 30 16:45:19 2024...

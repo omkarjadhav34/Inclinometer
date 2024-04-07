@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="scw_hwspec" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\github_repo\Inclinometer\Inclinometer"/>
+	<item key="fpga_elf_mem_selection" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\modified_fw\inclino_fw\Debug"/>
+	<item key="scw_hwspec_file_selection" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\github_repo\Inclinometer\Inclinometer"/>
+	<item key="sdx_program_fpga_view_bit_bmm_browse_key" value="C:\Users\jadha\OneDrive\Desktop\TA\ECE544-Winter24\modified_fw\inclino_fw\_ide\bitstream"/>
+</section>

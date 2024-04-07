@@ -154,11 +154,6 @@ vcom -work axi_iic_v2_1_3 -93  \
 vcom -work xil_defaultlib -93  \
 "../../../bd/inclinometer/ip/inclinometer_axi_iic_0_1/sim/inclinometer_axi_iic_0_1.vhd" \
 
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/ec67/hdl" "+incdir+../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/7698" "+incdir+../../../../Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/drivers/nexys4io_v1_0/src" \
-"../../../bd/inclinometer/ip/inclinometer_bidirec_0_0/sim/inclinometer_bidirec_0_0.v" \
-"../../../bd/inclinometer/ip/inclinometer_bidirec_0_1/sim/inclinometer_bidirec_0_1.v" \
-"../../../bd/inclinometer/sim/inclinometer.v" \
-
 vcom -work microblaze_v11_0_10 -93  \
 "../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/1f7b/hdl/microblaze_v11_0_vh_rfs.vhd" \
 
@@ -184,6 +179,9 @@ vlog -work blk_mem_gen_v8_4_5  -v2k5 "+incdir+../../../../Inclinometer.gen/sourc
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/ec67/hdl" "+incdir+../../../../Inclinometer.gen/sources_1/bd/inclinometer/ipshared/7698" "+incdir+../../../../Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_nexys4io_0_2/drivers/nexys4io_v1_0/src" \
 "../../../bd/inclinometer/ip/inclinometer_lmb_bram_3/sim/inclinometer_lmb_bram_3.v" \
+"../../../bd/inclinometer/ip/inclinometer_bidirec_0_0/sim/inclinometer_bidirec_0_0.v" \
+"../../../bd/inclinometer/ip/inclinometer_bidirec_1_0/sim/inclinometer_bidirec_1_0.v" \
+"../../../bd/inclinometer/sim/inclinometer.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

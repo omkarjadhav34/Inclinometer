@@ -1,0 +1,6 @@
+14:08:03 **** Incremental Build of configuration Debug for project inclino_fw_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+
+14:08:03 Build Finished (took 208ms)
+

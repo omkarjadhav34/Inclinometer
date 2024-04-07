@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Sun Jan 21 17:22:43 2024
 // Host        : Omkar running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top inclinometer_microblaze_0_axi_intc_1 -prefix
+//               inclinometer_microblaze_0_axi_intc_1_ inclinometer_microblaze_0_axi_intc_1_stub.v
 // Design      : inclinometer_microblaze_0_axi_intc_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

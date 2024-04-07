@@ -1,0 +1,30 @@
+19:27:40 **** Incremental Build of configuration Debug for project inclino_fw ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/modified_fw/inclino/export/inclino/sw/inclino/freertos10_xilinx_domain/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:67:36: warning: 'accAngleZ' defined but not used [-Wunused-variable]
+   67 | static float accAngleX, accAngleY, accAngleZ;
+      |                                    ^~~~~~~~~
+../src/main.c:67:25: warning: 'accAngleY' defined but not used [-Wunused-variable]
+   67 | static float accAngleX, accAngleY, accAngleZ;
+      |                         ^~~~~~~~~
+../src/main.c:67:14: warning: 'accAngleX' defined but not used [-Wunused-variable]
+   67 | static float accAngleX, accAngleY, accAngleZ;
+      |              ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: inclino_fw.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/modified_fw/inclino/export/inclino/sw/inclino/freertos10_xilinx_domain/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "inclino_fw.elf"  ./src/MPU6050/mpu6050.o  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+'Finished building target: inclino_fw.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size inclino_fw.elf  |tee "inclino_fw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  47404	    436	  12296	  60136	   eae8	inclino_fw.elf
+'Finished building: inclino_fw.elf.size'
+' '
+
+19:27:41 Build Finished (took 787ms)
+

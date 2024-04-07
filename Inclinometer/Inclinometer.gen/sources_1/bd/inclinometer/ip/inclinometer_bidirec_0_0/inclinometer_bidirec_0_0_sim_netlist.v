@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Wed Jan 17 14:33:39 2024
+// Date        : Tue Jan 30 15:46:55 2024
 // Host        : Omkar running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_sim_netlist.v
+//               c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0_sim_netlist.v
 // Design      : inclinometer_bidirec_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,17 +25,44 @@ module inclinometer_bidirec_0_0
   output outp;
   inout bidir;
 
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire bidir;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire inp;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire oe;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire outp;
+
+  inclinometer_bidirec_0_0_bidirec inst
+       (.bidir(bidir),
+        .inp(inp),
+        .oe(oe),
+        .outp(outp));
+endmodule
+
+(* ORIG_REF_NAME = "bidirec" *) 
+module inclinometer_bidirec_0_0_bidirec
+   (outp,
+    bidir,
+    inp,
+    oe);
+  output outp;
+  inout bidir;
+  input inp;
+  input oe;
+
   wire bidir;
   wire inp;
   wire oe;
+  wire outp;
 
-  assign outp = bidir;
-  LUT2 #(
-    .INIT(4'h8)) 
-    bidir_INST_0
-       (.I0(inp),
-        .I1(oe),
-        .O(bidir));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  IOBUF IIC_0_scl_iobuf
+       (.I(inp),
+        .IO(bidir),
+        .O(outp),
+        .T(oe));
 endmodule
 `ifndef GLBL
 `define GLBL

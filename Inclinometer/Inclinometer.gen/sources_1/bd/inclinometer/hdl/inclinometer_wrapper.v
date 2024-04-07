@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Sun Jan 21 17:21:56 2024
+//Date        : Tue Jan 30 15:45:06 2024
 //Host        : Omkar running 64-bit major release  (build 9200)
 //Command     : generate_target inclinometer_wrapper.bd
 //Design      : inclinometer_wrapper
@@ -10,9 +10,7 @@
 `timescale 1 ps / 1 ps
 
 module inclinometer_wrapper
-   (JC_0,
-    JC_1,
-    RGB1_Blue,
+   (RGB1_Blue,
     RGB1_Green,
     RGB1_Red,
     RGB2_Blue,
@@ -27,13 +25,13 @@ module inclinometer_wrapper
     dp,
     led,
     resetn,
+    sclk_io,
+    sda_io,
     seg,
     sw,
     sys_clock,
     usb_uart_rxd,
     usb_uart_txd);
-  inout JC_0;
-  inout JC_1;
   output RGB1_Blue;
   output RGB1_Green;
   output RGB1_Red;
@@ -49,14 +47,14 @@ module inclinometer_wrapper
   output dp;
   output [15:0]led;
   input resetn;
+  inout sclk_io;
+  inout sda_io;
   output [6:0]seg;
   input [15:0]sw;
   input sys_clock;
   input usb_uart_rxd;
   output usb_uart_txd;
 
-  wire JC_0;
-  wire JC_1;
   wire RGB1_Blue;
   wire RGB1_Green;
   wire RGB1_Red;
@@ -72,6 +70,8 @@ module inclinometer_wrapper
   wire dp;
   wire [15:0]led;
   wire resetn;
+  wire sclk_io;
+  wire sda_io;
   wire [6:0]seg;
   wire [15:0]sw;
   wire sys_clock;
@@ -79,9 +79,7 @@ module inclinometer_wrapper
   wire usb_uart_txd;
 
   inclinometer inclinometer_i
-       (.JC_0(JC_0),
-        .JC_1(JC_1),
-        .RGB1_Blue(RGB1_Blue),
+       (.RGB1_Blue(RGB1_Blue),
         .RGB1_Green(RGB1_Green),
         .RGB1_Red(RGB1_Red),
         .RGB2_Blue(RGB2_Blue),
@@ -96,6 +94,8 @@ module inclinometer_wrapper
         .dp(dp),
         .led(led),
         .resetn(resetn),
+        .sclk_io(sclk_io),
+        .sda_io(sda_io),
         .seg(seg),
         .sw(sw),
         .sys_clock(sys_clock),

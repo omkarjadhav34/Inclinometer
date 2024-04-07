@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.xpr">
+<Project Version="7" Minor="61" Path="C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="3a5aeac9a91143d29da1cbd017ed1c95"/>
@@ -43,11 +43,11 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys-a7-100t:part0:1.3"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../../AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store"/>
+    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../../../../../../../AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_project1_release_r1_0/IP/ece544ip_w23/nexys4io_3_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_project1_release_r1_0/IP/ece544ip_w23/nexys4io_3_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPDefaultOutputPath" Val="$PGENDIR/sources_1"/>
     <Option Name="IPCachePermission" Val="read"/>
@@ -67,13 +67,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="20"/>
-    <Option Name="WTModelSimExportSim" Val="20"/>
-    <Option Name="WTQuestaExportSim" Val="20"/>
+    <Option Name="WTXSimExportSim" Val="27"/>
+    <Option Name="WTModelSimExportSim" Val="27"/>
+    <Option Name="WTQuestaExportSim" Val="27"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="20"/>
-    <Option Name="WTRivieraExportSim" Val="20"/>
-    <Option Name="WTActivehdlExportSim" Val="20"/>
+    <Option Name="WTVcsExportSim" Val="27"/>
+    <Option Name="WTRivieraExportSim" Val="27"/>
+    <Option Name="WTActivehdlExportSim" Val="27"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -93,7 +93,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/hdl/nexysa7fpga.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_gsproj_R1_0/hdl/nexysa7fpga.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_gsproj_R1_0/hdl/nexysa7fpga.v"/>
           <Attr Name="ImportTime" Val="1673648002"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -106,27 +106,28 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0.xci">
+          <Proxy FileSetName="inclinometer_bidirec_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0.xci">
           <Proxy FileSetName="inclinometer_bidirec_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_bidirec_0_1/inclinometer_bidirec_0_1.xci">
-          <Proxy FileSetName="inclinometer_bidirec_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1.xci">
-          <Proxy FileSetName="inclinometer_microblaze_0_axi_intc_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_xbar_2/inclinometer_xbar_2.xci">
-          <Proxy FileSetName="inclinometer_xbar_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3.xci">
-          <Proxy FileSetName="inclinometer_dlmb_bram_if_cntlr_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3.xci">
-          <Proxy FileSetName="inclinometer_ilmb_bram_if_cntlr_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="inclinometer.bd" FileRelPathName="ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3.xci">
-          <Proxy FileSetName="inclinometer_lmb_bram_3"/>
-        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/EmbeddedSystem/EmbeddedSystem.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
@@ -138,7 +139,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/src/rvfpganexys.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../ECE540-Fall23/Project1/RVfpga_EL2/RVfpga_NexysA7-DDR/src/rvfpganexys.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540-Fall23/Project1/RVfpga_EL2/RVfpga_NexysA7-DDR/src/rvfpganexys.xdc"/>
           <Attr Name="ImportTime" Val="1693582712"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -181,13 +182,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="inclinometer_xbar_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_xbar_2" RelGenDir="$PGENDIR/inclinometer_xbar_2">
-      <Config>
-        <Option Name="TopModule" Val="inclinometer_xbar_2"/>
-        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="inclinometer_bidirec_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_bidirec_0_0" RelGenDir="$PGENDIR/inclinometer_bidirec_0_0">
       <Config>
         <Option Name="TopModule" Val="inclinometer_bidirec_0_0"/>
@@ -195,37 +189,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="inclinometer_bidirec_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_bidirec_0_1" RelGenDir="$PGENDIR/inclinometer_bidirec_0_1">
+    <FileSet Name="inclinometer_bidirec_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_bidirec_1_0" RelGenDir="$PGENDIR/inclinometer_bidirec_1_0">
       <Config>
-        <Option Name="TopModule" Val="inclinometer_bidirec_0_1"/>
-        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="inclinometer_dlmb_bram_if_cntlr_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_dlmb_bram_if_cntlr_3" RelGenDir="$PGENDIR/inclinometer_dlmb_bram_if_cntlr_3">
-      <Config>
-        <Option Name="TopModule" Val="inclinometer_dlmb_bram_if_cntlr_3"/>
-        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="inclinometer_ilmb_bram_if_cntlr_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_ilmb_bram_if_cntlr_3" RelGenDir="$PGENDIR/inclinometer_ilmb_bram_if_cntlr_3">
-      <Config>
-        <Option Name="TopModule" Val="inclinometer_ilmb_bram_if_cntlr_3"/>
-        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="inclinometer_lmb_bram_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_lmb_bram_3" RelGenDir="$PGENDIR/inclinometer_lmb_bram_3">
-      <Config>
-        <Option Name="TopModule" Val="inclinometer_lmb_bram_3"/>
-        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="inclinometer_microblaze_0_axi_intc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/inclinometer_microblaze_0_axi_intc_1" RelGenDir="$PGENDIR/inclinometer_microblaze_0_axi_intc_1">
-      <Config>
-        <Option Name="TopModule" Val="inclinometer_microblaze_0_axi_intc_1"/>
+        <Option Name="TopModule" Val="inclinometer_bidirec_1_0"/>
         <Option Name="dataflowViewerSettings" Val="min_width=16"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
@@ -260,16 +226,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="inclinometer_xbar_2_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_xbar_2" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_xbar_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_xbar_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_xbar_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_xbar_2_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="inclinometer_bidirec_0_0_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_bidirec_0_0" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_bidirec_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_bidirec_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
@@ -280,57 +236,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="inclinometer_bidirec_0_1_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_bidirec_0_1" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_bidirec_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_bidirec_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_1_synth_1">
+    <Run Id="inclinometer_bidirec_1_0_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_bidirec_1_0" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_bidirec_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_bidirec_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_dlmb_bram_if_cntlr_3_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_dlmb_bram_if_cntlr_3" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_dlmb_bram_if_cntlr_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_dlmb_bram_if_cntlr_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_dlmb_bram_if_cntlr_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_dlmb_bram_if_cntlr_3_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_ilmb_bram_if_cntlr_3_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_ilmb_bram_if_cntlr_3" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_ilmb_bram_if_cntlr_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_ilmb_bram_if_cntlr_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_ilmb_bram_if_cntlr_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_ilmb_bram_if_cntlr_3_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_lmb_bram_3_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_lmb_bram_3" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_lmb_bram_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_lmb_bram_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_lmb_bram_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_lmb_bram_3_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_microblaze_0_axi_intc_1_synth_1" Type="Ft3:Synth" SrcSet="inclinometer_microblaze_0_axi_intc_1" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_microblaze_0_axi_intc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/inclinometer_microblaze_0_axi_intc_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_microblaze_0_axi_intc_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_microblaze_0_axi_intc_1_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -356,23 +264,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="inclinometer_xbar_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_xbar_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_xbar_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_xbar_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_xbar_2_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="inclinometer_bidirec_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_bidirec_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_bidirec_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
@@ -390,85 +281,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="inclinometer_bidirec_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_bidirec_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_bidirec_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_0_1_impl_1">
+    <Run Id="inclinometer_bidirec_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_bidirec_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_bidirec_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_bidirec_1_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_dlmb_bram_if_cntlr_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_dlmb_bram_if_cntlr_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_dlmb_bram_if_cntlr_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_dlmb_bram_if_cntlr_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_dlmb_bram_if_cntlr_3_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_ilmb_bram_if_cntlr_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_ilmb_bram_if_cntlr_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_ilmb_bram_if_cntlr_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_ilmb_bram_if_cntlr_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_ilmb_bram_if_cntlr_3_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_lmb_bram_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_lmb_bram_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_lmb_bram_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_lmb_bram_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_lmb_bram_3_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="inclinometer_microblaze_0_axi_intc_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="inclinometer_microblaze_0_axi_intc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="inclinometer_microblaze_0_axi_intc_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/inclinometer_microblaze_0_axi_intc_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/inclinometer_microblaze_0_axi_intc_1_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

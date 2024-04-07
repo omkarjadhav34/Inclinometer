@@ -39,12 +39,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinomete
 # IP: bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_axi_iic_0_1 || ORIG_REF_NAME==inclinometer_axi_iic_0_1} -quiet] -quiet
 
-# IP: bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_bidirec_0_0 || ORIG_REF_NAME==inclinometer_bidirec_0_0} -quiet] -quiet
-
-# IP: bd/inclinometer/ip/inclinometer_bidirec_0_1/inclinometer_bidirec_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_bidirec_0_1 || ORIG_REF_NAME==inclinometer_bidirec_0_1} -quiet] -quiet
-
 # IP: bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_microblaze_0_3 || ORIG_REF_NAME==inclinometer_microblaze_0_3} -quiet] -quiet
 
@@ -63,4 +57,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinomete
 # IP: bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_lmb_bram_3 || ORIG_REF_NAME==inclinometer_lmb_bram_3} -quiet] -quiet
 
-# XDC: c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/inclinometer_ooc.xdc
+# IP: bd/inclinometer/ip/inclinometer_bidirec_0_0/inclinometer_bidirec_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_bidirec_0_0 || ORIG_REF_NAME==inclinometer_bidirec_0_0} -quiet] -quiet
+
+# IP: bd/inclinometer/ip/inclinometer_bidirec_1_0/inclinometer_bidirec_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==inclinometer_bidirec_1_0 || ORIG_REF_NAME==inclinometer_bidirec_1_0} -quiet] -quiet
+
+# XDC: c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/inclinometer_ooc.xdc

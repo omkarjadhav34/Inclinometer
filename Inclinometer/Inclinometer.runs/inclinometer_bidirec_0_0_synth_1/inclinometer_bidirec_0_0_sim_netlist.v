@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Wed Jan 17 14:33:38 2024
+// Date        : Tue Jan 30 15:46:54 2024
 // Host        : Omkar running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ inclinometer_bidirec_0_0_sim_netlist.v
@@ -11,6 +11,29 @@
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
+
+module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bidirec
+   (outp,
+    bidir,
+    inp,
+    oe);
+  output outp;
+  inout bidir;
+  input inp;
+  input oe;
+
+  wire bidir;
+  wire inp;
+  wire oe;
+  wire outp;
+
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  IOBUF IIC_0_scl_iobuf
+       (.I(inp),
+        .IO(bidir),
+        .O(outp),
+        .T(oe));
+endmodule
 
 (* CHECK_LICENSE_TYPE = "inclinometer_bidirec_0_0,bidirec,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
 (* X_CORE_INFO = "bidirec,Vivado 2022.2" *) 
@@ -25,17 +48,20 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   output outp;
   inout bidir;
 
-  wire bidir;
-  wire inp;
-  wire oe;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire bidir;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire inp;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire oe;
+  (* DRIVE = "16" *) (* IBUF_LOW_PWR *) (* IOSTANDARD = "LVCMOS33" *) 
+  (* SLEW = "SLOW" *) wire outp;
 
-  assign outp = bidir;
-  LUT2 #(
-    .INIT(4'h8)) 
-    bidir_INST_0
-       (.I0(inp),
-        .I1(oe),
-        .O(bidir));
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bidirec inst
+       (.bidir(bidir),
+        .inp(inp),
+        .oe(oe),
+        .outp(outp));
 endmodule
 `ifndef GLBL
 `define GLBL

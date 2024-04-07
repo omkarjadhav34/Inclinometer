@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA8F636B3B574005",
+      "boundary_crc": "0xD8DC2E05099E84C3",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../Inclinometer.gen/sources_1/bd/inclinometer",
       "name": "inclinometer",
@@ -31,8 +31,6 @@
       "axi_uartlite_0": "",
       "nexys4io_0": "",
       "axi_iic_0": "",
-      "bidirec_0": "",
-      "bidirec_1": "",
       "microblaze_0": "",
       "microblaze_0_local_memory": {
         "dlmb_v10": "",
@@ -40,7 +38,9 @@
         "dlmb_bram_if_cntlr": "",
         "ilmb_bram_if_cntlr": "",
         "lmb_bram": ""
-      }
+      },
+      "bidirec_0": "",
+      "bidirec_1": ""
     },
     "interface_ports": {
       "usb_uart": {
@@ -153,10 +153,10 @@
         "left": "15",
         "right": "0"
       },
-      "JC_0": {
+      "sclk_io": {
         "direction": "IO"
       },
-      "JC_1": {
+      "sda_io": {
         "direction": "IO"
       }
     },
@@ -1118,56 +1118,6 @@
           }
         }
       },
-      "bidirec_0": {
-        "vlnv": "xilinx.com:module_ref:bidirec:1.0",
-        "xci_name": "inclinometer_bidirec_0_0",
-        "xci_path": "ip\\inclinometer_bidirec_0_0\\inclinometer_bidirec_0_0.xci",
-        "inst_hier_path": "bidirec_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "bidirec",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "oe": {
-            "direction": "I"
-          },
-          "inp": {
-            "direction": "I"
-          },
-          "outp": {
-            "direction": "O"
-          },
-          "bidir": {
-            "direction": "IO"
-          }
-        }
-      },
-      "bidirec_1": {
-        "vlnv": "xilinx.com:module_ref:bidirec:1.0",
-        "xci_name": "inclinometer_bidirec_0_1",
-        "xci_path": "ip\\inclinometer_bidirec_0_1\\inclinometer_bidirec_0_1.xci",
-        "inst_hier_path": "bidirec_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "bidirec",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "oe": {
-            "direction": "I"
-          },
-          "inp": {
-            "direction": "I"
-          },
-          "outp": {
-            "direction": "O"
-          },
-          "bidir": {
-            "direction": "IO"
-          }
-        }
-      },
       "microblaze_0": {
         "vlnv": "xilinx.com:ip:microblaze:11.0",
         "xci_name": "inclinometer_microblaze_0_3",
@@ -1401,6 +1351,56 @@
             ]
           }
         }
+      },
+      "bidirec_0": {
+        "vlnv": "xilinx.com:module_ref:bidirec:1.0",
+        "xci_name": "inclinometer_bidirec_0_0",
+        "xci_path": "ip\\inclinometer_bidirec_0_0\\inclinometer_bidirec_0_0.xci",
+        "inst_hier_path": "bidirec_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bidirec",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "oe": {
+            "direction": "I"
+          },
+          "inp": {
+            "direction": "I"
+          },
+          "outp": {
+            "direction": "O"
+          },
+          "bidir": {
+            "direction": "IO"
+          }
+        }
+      },
+      "bidirec_1": {
+        "vlnv": "xilinx.com:module_ref:bidirec:1.0",
+        "xci_name": "inclinometer_bidirec_1_0",
+        "xci_path": "ip\\inclinometer_bidirec_1_0\\inclinometer_bidirec_1_0.xci",
+        "inst_hier_path": "bidirec_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bidirec",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "oe": {
+            "direction": "I"
+          },
+          "inp": {
+            "direction": "I"
+          },
+          "outp": {
+            "direction": "O"
+          },
+          "bidir": {
+            "direction": "IO"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1480,13 +1480,13 @@
     "nets": {
       "Net": {
         "ports": [
-          "JC_0",
+          "sclk_io",
           "bidirec_0/bidir"
         ]
       },
       "Net1": {
         "ports": [
-          "JC_1",
+          "sda_io",
           "bidirec_1/bidir"
         ]
       },

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="inclino_fw_system-imgFile" value=""/>
+	<item key="inclino_fw_system-offSet" value=""/>
+	<item key="inclino_fw_system-initFile" value=""/>
+	<item key="inclino_fw_system-flashType" value="&lt;None&gt;"/>
+	<item key="inclino_fw_system-verifyFlash" value="false"/>
+	<item key="inclino_fw_system-blankCheck" value="false"/>
+	<item key="inclino_fw_system-device" value="Auto Detect"/>
+	<item key="inclino_fw_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="inclino_fw_system"/>
+</section>

@@ -1,0 +1,208 @@
+/**
+ * @file 	mpu6050.c
+ * @author 	Omkar Jadhav (omjadhav@pdx.edu)
+ *
+ * @brief	Contains function definitions for MPU6050 sensor
+ *
+ * @rev	 1.0  - Created file and added definitions for initialization
+ * 			  - Added basic gryo configuration (only Full Scale Range) and X axis data capture
+ */
+#include "mpu6050.h"
+#include "xiic.h"
+
+void mpu6050_init(XIic* i2c, MPU6050* mpu6050)
+{
+  u8 oBuf[2]; //= {PWR_MGMT_1;
+  u8 iBuf = 0x00;
+
+  oBuf[0] = 0x75;
+  oBuf[1] = 0x00;
+
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, &iBuf, 1, XIIC_STOP);
+  xil_printf("WHOAMI = 0x%x\n\r", iBuf);
+
+  oBuf[0] = PWR_MGMT_1;
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, &iBuf, 1, XIIC_STOP);
+  xil_printf("Power = 0x%x\n\r", iBuf);
+
+  oBuf[0] = PWR_MGMT_1;
+  oBuf[1] = 0x00;
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 2, XIIC_STOP);
+
+  oBuf[0] = PWR_MGMT_1;
+  oBuf[1] = 0x00;
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, &iBuf, 1, XIIC_STOP);
+  xil_printf("Power = 0x%x\n\r", iBuf);
+
+  oBuf[0] = 0x1A;
+  oBuf[1] = 0x05;
+  XIic_Send(i2c->BaseAddress, 0x68, (u8 *) &oBuf, 2, XIIC_STOP);
+}
+
+void mpu6050_gyroCfg(XIic* i2c, MPU6050* mpu6050)
+{
+  u8 iBuf;
+  u8 oBuf[2];
+
+  // Configure Gyro Sensitivity - Full Scale Range (default +/- 250deg/s)
+
+  oBuf[0] = GYRO_CONFIG;
+  oBuf[1] = 0x00;
+  XIic_Send(i2c->BaseAddress, 0x68, (u8 *) oBuf, 2, XIIC_STOP);
+
+  oBuf[0] = GYRO_CONFIG;
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, &iBuf, 1, XIIC_STOP);
+  xil_printf("GyroConfig = 0x%x\n\r", iBuf);
+}
+
+void mpu6050_accCfg(XIic* i2c, MPU6050* mpu6050)
+{
+  u8 iBuf;
+  u8 oBuf[2];
+
+  oBuf[0] = ACC_CONFIG;
+  oBuf[1] = 0x10;
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 2, XIIC_STOP);
+
+  oBuf[0] = ACC_CONFIG;
+  XIic_Send(i2c->BaseAddress, 0x68, oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, &iBuf, 1, XIIC_STOP);
+  xil_printf("AccConfig = 0x%x\n\r", iBuf);
+}
+
+void mpu6050_getAccData(XIic* i2c, MPU6050* mpu6050, u8 *angle_actual, int axis)
+{
+  u8 iBuf;
+  u8 oBuf;
+
+  // get the higher nibble data of a particular axis
+  //XIic_SetAddress(i2c, XII_ADDR_TO_SEND_TYPE, (axis == SET_AXIS_X) ? GYRO_XOUT_2 :
+  //										(axis == SET_AXIS_Y) ? GYRO_YOUT_2 : GYRO_ZOUT_2);
+  oBuf = (axis == SET_AXIS_X) ? ACC_XOUT_2 : (axis == SET_AXIS_Y) ? ACC_YOUT_2 : ACC_ZOUT_2;
+  XIic_Send(i2c->BaseAddress, 0x68, (u8 *) &oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, (u8 *) &iBuf, 6, XIIC_STOP);/*
+   //xil_printf("Data: %d\n\r", iBuf);
+
+   //XIic_MasterRecv(i2c, &iBuf, 1);
+   *angle_actual = ((u8)iBuf) << 8;
+
+   // get the higher nibble data of a particular axis
+   //XIic_SetAddress(i2c, XII_ADDR_TO_SEND_TYPE, (axis == SET_AXIS_X) ? GYRO_XOUT_1 :
+   //		(axis == SET_AXIS_Y) ? GYRO_YOUT_1 : GYRO_ZOUT_1);
+
+   oBuf = (axis == SET_AXIS_X) ? ACC_XOUT_1 :
+   (axis == SET_AXIS_Y) ? ACC_YOUT_1 : ACC_ZOUT_1;
+
+   XIic_Send(i2c->BaseAddress, 0x68, (u8 *)&oBuf,1,XIIC_REPEATED_START);
+   XIic_Recv(i2c->BaseAddress, 0x68, (u8 *)&iBuf, 1, XIIC_STOP);
+   //xil_printf("Data: %d\n\r", iBuf);
+   //XIic_MasterRecv(i2c, &iBuf, 1);
+   *angle_actual |= (u8)iBuf;
+
+   //xil_printf("ACC: Axis: %d Angle: %d\n\r", axis, *angle_actual);*/
+}
+void mpu6050_getGyroData(XIic* i2c, MPU6050* mpu6050, u8 *angle_actual, int axis)
+{
+  u8 iBuf;
+  u8 oBuf;
+
+  // get the higher nibble data of a particular axis
+  // XIic_SetAddress(i2c, XII_ADDR_TO_SEND_TYPE, (axis == SET_AXIS_X) ? GYRO_XOUT_2 :
+  //										(axis == SET_AXIS_Y) ? GYRO_YOUT_2 : GYRO_ZOUT_2);
+  oBuf = (axis == SET_AXIS_X) ? GYRO_XOUT_2 : (axis == SET_AXIS_Y) ? GYRO_YOUT_2 : GYRO_ZOUT_2;
+
+  XIic_Send(i2c->BaseAddress, 0x68, (u8 *) &oBuf, 1, XIIC_REPEATED_START);
+  XIic_Recv(i2c->BaseAddress, 0x68, (u8 *) angle_actual, 1, XIIC_STOP);
+
+  //xil_printf("Data: %d\n\r", iBuf);
+  /*
+   //XIic_MasterRecv(i2c, &iBuf, 1);
+   *angle_actual = ((u8)iBuf) << 8;
+
+   // get the higher nibble data of a particular axis
+   //XIic_SetAddress(i2c, XII_ADDR_TO_SEND_TYPE, (axis == SET_AXIS_X) ? GYRO_XOUT_1 :
+   //		(axis == SET_AXIS_Y) ? GYRO_YOUT_1 : GYRO_ZOUT_1);
+
+   oBuf = (axis == SET_AXIS_X) ? GYRO_XOUT_1 :
+   (axis == SET_AXIS_Y) ? GYRO_YOUT_1 : GYRO_ZOUT_1;
+
+   XIic_Send(i2c->BaseAddress, 0x68, (u8 *)&oBuf,1,XIIC_REPEATED_START);
+   XIic_Recv(i2c->BaseAddress, 0x68, (u8 *)&iBuf, 1, XIIC_STOP);
+   //xil_printf("Data: %d\n\r", iBuf);
+   //XIic_MasterRecv(i2c, &iBuf, 1);
+   *angle_actual |= (u8)iBuf;
+
+   //xil_printf("Axis: %d Angle: %d\n\r", axis, *angle_actual);*/
+}
+
+void mpu6050_setSleepMode(XIic* i2c, MPU6050* mpu6050)
+{
+  u8 oBuf[2] = { PWR_MGMT_1, 0x40 };
+
+  XIic_Send(i2c->BaseAddress, 0x68, (u8 *) &oBuf, 2, XIIC_STOP);
+}
+
+void mpu6050_clearSleepMode(XIic* i2c, MPU6050* mpu6050)
+{
+
+  u8 oBuf[2] = { PWR_MGMT_1, 0x00 };
+
+  XIic_Send(i2c->BaseAddress, 0x68, (u8 *) &oBuf, 2, XIIC_STOP);
+}
+/*
+ void mpu6050_calibration(XIic* i2c, MPU6050* mpu6050)
+ {
+ u8 axis, iteration;
+ float angle_actual
+
+ float sum;
+
+ for(iteration = 0; iteration < NUM_CALIB_VALUES; iteration++)
+ {
+ sum += mpu6050_getGyroData(i2c, mpu6050, u8 *angle_actual, axis);
+ }
+ for(axis = SET_AXIS_X; axis <= SET_AXIS_Z; i++)
+ {
+
+ }
+ }*/
+/*
+ void mpu6050_readAllReg(XIic* i2c, MPU6050* mpu6050)
+ {
+ u8 oBuf = PWR_MGMT_1;
+ u8 iBuf = 0x00;
+
+ iBuf = 0x75;
+
+ //XIic_Send(i2c->BaseAddress, 0x75, (u8 *)&iBuf,1,XIIC_REPEATED_START);
+ XIic_Recv(i2c->BaseAddress, MPU6050_ID_ADDR,(u8 *)&oBuf,1,XIIC_STOP);
+ xil_printf("WHOAMI = 0x%x\n\r",oBuf);
+
+ iBuf = PWR_MGMT_1;
+ oBuf = 0x01;
+ XIic_Send(i2c->BaseAddress, PWR_MGMT_1,(u8 *)&oBuf,1,XIIC_REPEATED_START);
+ XIic_Recv(i2c->BaseAddress, PWR_MGMT_1,(u8 *)&oBuf,1,XIIC_STOP);
+ xil_printf("Power = 0x%x\n\r",oBuf);
+
+ iBuf = GYRO_CONFIG;
+ oBuf = 0x10;
+ XIic_Send(i2c->BaseAddress, GYRO_CONFIG,(u8 *)&oBuf,1,XIIC_REPEATED_START);
+ XIic_Recv(i2c->BaseAddress, GYRO_CONFIG,(u8 *)&oBuf,1,XIIC_STOP);
+ xil_printf("GyroConfig = 0x%x\n\r",oBuf);
+
+ iBuf = 0x6A;
+ oBuf = 0x00;
+ //XIic_Send(i2c->BaseAddress, 0x6A,(u8 *)&iBuf,1,XIIC_REPEATED_START);
+ XIic_Recv(i2c->BaseAddress, 0x6A,(u8 *)&oBuf,1,XIIC_STOP);
+ xil_printf("UserCntrl = 0x%x\n\r", (u8)oBuf);
+
+ XIic_Recv(i2c->BaseAddress, GYRO_XOUT_1, (u8 *)&iBuf, 1, XIIC_STOP);
+ xil_printf("Data: %d\n\r", iBuf);
+
+
+ }
+ */

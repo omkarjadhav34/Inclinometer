@@ -33,12 +33,15 @@ module nexysa7fpga
     seg,
     an,
     dp,
-    JC_0,
-    JC_1,
+//    JC_0,
+//    JC_1,
     usb_uart_rxd,
-    usb_uart_txd
+    usb_uart_txd,
+   sclk_io,
+   sda_io
  );
-
+  inout sclk_io;
+  inout sda_io;
   input [15:0] sw;
   input btnC, btnU, btnR, btnL, btnD;
   input btnCpuReset;
@@ -53,8 +56,8 @@ module nexysa7fpga
   output [6:0] seg;
   output [7:0] an;
   output dp;
-  inout  JC_0;
-  inout JC_1;
+//  inout  JC_0;
+//  inout JC_1;
   input usb_uart_rxd;
   output usb_uart_txd;
   wire [15:0] sw;
@@ -95,19 +98,28 @@ module nexysa7fpga
   wire  JC_0;
   wire JC_1;
  /*
-  IOBUF IIC_0_scl_iobuf
+  IOBUF #(
+   .DRIVE(16), // Specify the output drive strength
+   .IOSTANDARD("LVCMOS33")
+ 
+)IIC_0_scl_iobuf
        (.I(IIC_0_scl_o),
-        .IO(JB[0]),
+        .IO(sclk_io),
         .O(IIC_0_scl_i),
         .T(IIC_0_scl_t));
-  IOBUF IIC_0_sda_iobuf
+  IOBUF #(
+   .DRIVE(16), // Specify the output drive strength
+    .IOSTANDARD("LVCMOS33")
+)IIC_0_sda_iobuf
        (.I(IIC_0_sda_o),
-        .IO(JB[1]),
+        .IO(sda_io),
         .O(IIC_0_sda_i),
         .T(IIC_0_sda_t)); 
-         
-bidirec iic_scl  (.oe(IIC_0_scl_t ), .inp(IIC_0_scl_o ), .outp(IIC_0_scl_i ), .bidir(JB[0] ));
-bidirec iic_sda  (.oe(IIC_0_sda_t ), .inp(IIC_0_sda_o ), .outp(IIC_0_sda_i ), .bidir(JB[1] ));
+       */
+       
+        /*
+bidirec iic_scl  (.oe(IIC_0_scl_t ), .inp(IIC_0_scl_o ), .outp(IIC_0_scl_i ), .bidir(sclk_io ));
+bidirec iic_sda  (.oe(IIC_0_sda_t ), .inp(IIC_0_sda_o ), .outp(IIC_0_sda_i ), .bidir(sda_io ));
    */
    // instantiate the embedded system  
    inclinometer embsys_i
@@ -126,14 +138,16 @@ bidirec iic_sda  (.oe(IIC_0_sda_t ), .inp(IIC_0_sda_o ), .outp(IIC_0_sda_i ), .b
         .btnR(btnR),
         .btnU(btnU),
         .dp_0(dp),/*
-        .iic_rtl_scl_i(IIC_0_scl_i),
-        .iic_rtl_scl_o(IIC_0_scl_o),
-        .iic_rtl_scl_t(IIC_0_scl_t),
-        .iic_rtl_sda_i(IIC_0_sda_i),
-        .iic_rtl_sda_o(IIC_0_sda_o),
-        .iic_rtl_sda_t(IIC_0_sda_t),*/
+        .IIC_0_scl_i(IIC_0_scl_i),
+        .IIC_0_scl_o(IIC_0_scl_o),
+        .IIC_0_scl_t(IIC_0_scl_t),
+        .IIC_0_sda_i(IIC_0_sda_i),
+        .IIC_0_sda_o(IIC_0_sda_o),
+        .IIC_0_sda_t(IIC_0_sda_t),
         .JC_0(JC_0),
-        .JC_1(JC_1),
+        .JC_1(JC_1),*/
+        .sda_io(sda_io),
+        .sclk_io(sclk_io),
         .led(led),
         .sw(sw),
         .resetn(1'b1),
@@ -145,7 +159,18 @@ endmodule
 // GPIO Extended
 module bidirec (input wire oe, input wire inp, output wire outp, inout wire bidir);
 
+/*
 assign bidir = oe ? inp : 1'bZ ;
 assign outp  = bidir;
+*/
 
+IOBUF #(
+   .DRIVE(16), // Specify the output drive strength
+   .IOSTANDARD("LVCMOS33")
+ 
+)IIC_0_scl_iobuf
+       (.I(inp),
+        .IO(bidir),
+        .O(outp),
+        .T(oe));
 endmodule

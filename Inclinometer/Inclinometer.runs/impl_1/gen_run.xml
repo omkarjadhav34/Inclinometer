@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1705886606">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1706663499">
   <File Type="ROUTE-PWR" Name="inclinometer_power_routed.rpt"/>
   <File Type="PA-TCL" Name="inclinometer.tcl"/>
   <File Type="BITSTR-MMI" Name="inclinometer.mmi"/>
@@ -83,7 +83,7 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/hdl/nexysa7fpga.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_gsproj_R1_0/hdl/nexysa7fpga.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../ECE_544_ESD_with_FPGA/Assignments/ece544w23_gsproj_R1_0/hdl/nexysa7fpga.v"/>
         <Attr Name="ImportTime" Val="1673648002"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -106,7 +106,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/src/rvfpganexys.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../ECE540-Fall23/Project1/RVfpga_EL2/RVfpga_NexysA7-DDR/src/rvfpganexys.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540-Fall23/Project1/RVfpga_EL2/RVfpga_NexysA7-DDR/src/rvfpganexys.xdc"/>
         <Attr Name="ImportTime" Val="1693582712"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -143,11 +143,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="inclinometer_lmb_bram_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="inclinometer_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="inclinometer_dlmb_bram_if_cntlr_3"/>
   <BlockFileSet Type="BlockSrcs" Name="inclinometer_bidirec_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="inclinometer_bidirec_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="inclinometer_ilmb_bram_if_cntlr_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="inclinometer_microblaze_0_axi_intc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="inclinometer_bidirec_1_0"/>
 </GenRun>

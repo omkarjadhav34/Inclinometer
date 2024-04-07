@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Sun Jan 21 17:26:11 2024
+| Date             : Tue Jan 30 17:13:44 2024
 | Host             : Omkar running 64-bit major release  (build 9200)
 | Command          : report_power -file inclinometer_power_routed.rpt -pb inclinometer_power_summary_routed.pb -rpx inclinometer_power_routed.rpx
 | Design           : inclinometer
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.244        |
+| Total On-Chip Power (W)  | 0.243        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.145        |
+| Dynamic (W)              | 0.144        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.9         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.016 |        7 |       --- |             --- |
-| Slice Logic              |     0.006 |     7426 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2488 |     63400 |            3.92 |
+| Clocks                   |     0.015 |        7 |       --- |             --- |
+| Slice Logic              |     0.006 |     7469 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2506 |     63400 |            3.95 |
 |   LUT as Distributed RAM |    <0.001 |       96 |     19000 |            0.51 |
-|   CARRY4                 |    <0.001 |      128 |     15850 |            0.81 |
-|   Register               |    <0.001 |     3026 |    126800 |            2.39 |
+|   CARRY4                 |    <0.001 |      129 |     15850 |            0.81 |
+|   Register               |    <0.001 |     3044 |    126800 |            2.40 |
 |   F7/F8 Muxes            |    <0.001 |      225 |     63400 |            0.35 |
 |   LUT as Shift Register  |    <0.001 |      100 |     19000 |            0.53 |
-|   Others                 |    <0.001 |      645 |       --- |             --- |
-| Signals                  |     0.010 |     4952 |       --- |             --- |
+|   Others                 |    <0.001 |      644 |       --- |             --- |
+| Signals                  |     0.010 |     4982 |       --- |             --- |
 | Block RAM                |     0.008 |       32 |       135 |           23.70 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | I/O                      |    <0.001 |       65 |       210 |           30.95 |
 | Static Power             |     0.099 |          |           |                 |
-| Total                    |     0.244 |          |           |                 |
+| Total                    |     0.243 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.055 |       0.039 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.054 |       0.038 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -149,18 +149,15 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| inclinometer                     |     0.145 |
+| inclinometer                     |     0.144 |
 |   axi_iic_0                      |     0.002 |
 |     U0                           |     0.002 |
 |       X_IIC                      |     0.002 |
-|   axi_timer_0                    |     0.004 |
-|     U0                           |     0.004 |
+|   axi_timer_0                    |     0.003 |
+|     U0                           |     0.003 |
 |       TC_CORE_I                  |     0.003 |
 |   clk_wiz_1                      |     0.106 |
 |     inst                         |     0.106 |
-|   mdm_1                          |     0.001 |
-|     U0                           |     0.001 |
-|       MDM_Core_I1                |     0.001 |
 |   microblaze_0                   |     0.015 |
 |     U0                           |     0.015 |
 |       MicroBlaze_Core_I          |     0.015 |

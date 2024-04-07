@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 -- Date        : Tue Jan 16 23:45:06 2024
 -- Host        : Omkar running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top inclinometer_xbar_2 -prefix
+--               inclinometer_xbar_2_ inclinometer_xbar_2_sim_netlist.vhdl
 -- Design      : inclinometer_xbar_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -80,8 +80,6 @@ entity inclinometer_xbar_2_axi_crossbar_v2_1_28_addr_arbiter_sasd is
     mi_wready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of inclinometer_xbar_2_axi_crossbar_v2_1_28_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_28_addr_arbiter_sasd";
 end inclinometer_xbar_2_axi_crossbar_v2_1_28_addr_arbiter_sasd;
 
 architecture STRUCTURE of inclinometer_xbar_2_axi_crossbar_v2_1_28_addr_arbiter_sasd is
@@ -1855,8 +1853,6 @@ entity inclinometer_xbar_2_axi_crossbar_v2_1_28_decerr_slave is
     m_valid_i_i_3_0 : in STD_LOGIC;
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of inclinometer_xbar_2_axi_crossbar_v2_1_28_decerr_slave : entity is "axi_crossbar_v2_1_28_decerr_slave";
 end inclinometer_xbar_2_axi_crossbar_v2_1_28_decerr_slave;
 
 architecture STRUCTURE of inclinometer_xbar_2_axi_crossbar_v2_1_28_decerr_slave is
@@ -2056,8 +2052,6 @@ entity inclinometer_xbar_2_axi_crossbar_v2_1_28_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of inclinometer_xbar_2_axi_crossbar_v2_1_28_splitter : entity is "axi_crossbar_v2_1_28_splitter";
 end inclinometer_xbar_2_axi_crossbar_v2_1_28_splitter;
 
 architecture STRUCTURE of inclinometer_xbar_2_axi_crossbar_v2_1_28_splitter is
@@ -2439,8 +2433,6 @@ entity inclinometer_xbar_2_axi_register_slice_v2_1_27_axic_register_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of inclinometer_xbar_2_axi_register_slice_v2_1_27_axic_register_slice : entity is "axi_register_slice_v2_1_27_axic_register_slice";
 end inclinometer_xbar_2_axi_register_slice_v2_1_27_axic_register_slice;
 
 architecture STRUCTURE of inclinometer_xbar_2_axi_register_slice_v2_1_27_axic_register_slice is
@@ -5079,8 +5071,6 @@ entity inclinometer_xbar_2_axi_crossbar_v2_1_28_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of inclinometer_xbar_2_axi_crossbar_v2_1_28_crossbar_sasd : entity is "axi_crossbar_v2_1_28_crossbar_sasd";
 end inclinometer_xbar_2_axi_crossbar_v2_1_28_crossbar_sasd;
 
 architecture STRUCTURE of inclinometer_xbar_2_axi_crossbar_v2_1_28_crossbar_sasd is
@@ -5706,8 +5696,6 @@ entity inclinometer_xbar_2_axi_crossbar_v2_1_28_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of inclinometer_xbar_2_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of inclinometer_xbar_2_axi_crossbar_v2_1_28_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of inclinometer_xbar_2_axi_crossbar_v2_1_28_axi_crossbar : entity is "axi_crossbar_v2_1_28_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of inclinometer_xbar_2_axi_crossbar_v2_1_28_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.runs/synth_1/inclinometer.tcl"
+  variable script "C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.runs/synth_1/inclinometer.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 set_param ced.repoPaths C:/Users/jadha/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/ced_store
 set_msg_config  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -id {[BD 41-1271]}  -suppress 
@@ -81,49 +80,49 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.cache/wt [current_project]
-set_property parent.project_path C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.cache/wt [current_project]
+set_property parent.project_path C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.3 [current_project]
 set_property ip_repo_paths c:/Users/jadha/OneDrive/Desktop/ECE_544_ESD_with_FPGA/Assignments/ece544w23_project1_release_r1_0/IP/ece544ip_w23/nexys4io_3_0 [current_project]
 update_ip_catalog
-set_property ip_output_repo c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.cache/ip [current_project]
+set_property ip_output_repo c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/sources_1/bd/inclinometer/inclinometer.bd
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_v10_3/inclinometer_ilmb_v10_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/inclinometer_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/data/mb_bootloop_le.elf]
+add_files C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/sources_1/bd/inclinometer/inclinometer.bd
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_xbar_2/inclinometer_xbar_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_axi_intc_1/inclinometer_microblaze_0_axi_intc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_mdm_1_1/inclinometer_mdm_1_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_clk_wiz_1_0/inclinometer_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_rst_clk_wiz_1_100M_0/inclinometer_rst_clk_wiz_1_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_timer_0_1/inclinometer_axi_timer_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_uartlite_0_0/inclinometer_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_axi_iic_0_1/inclinometer_axi_iic_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/inclinometer_microblaze_0_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_v10_3/inclinometer_dlmb_v10_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_v10_3/inclinometer_ilmb_v10_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_dlmb_bram_if_cntlr_3/inclinometer_dlmb_bram_if_cntlr_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_ilmb_bram_if_cntlr_3/inclinometer_ilmb_bram_if_cntlr_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_lmb_bram_3/inclinometer_lmb_bram_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/inclinometer_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.gen/sources_1/bd/inclinometer/ip/inclinometer_microblaze_0_3/data/mb_bootloop_le.elf]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -134,14 +133,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc
-set_property used_in_implementation false [get_files C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]
+read_xdc C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc
+set_property used_in_implementation false [get_files C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/constrs_1/imports/src/rvfpganexys.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/Inclinometer/Inclinometer.srcs/utils_1/imports/synth_1/inclinometer.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/jadha/OneDrive/Desktop/TA/ECE544-Winter24/github_repo/Inclinometer/Inclinometer/Inclinometer.srcs/utils_1/imports/synth_1/inclinometer.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
